@@ -1,0 +1,21 @@
+<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#bf00ff"/>
+      <stop offset="100%" stop-color="#ff006e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#0a0a0a" stroke="url(#grad)" stroke-width="3"/>
+
+  <!-- Letter A -->
+  <path d="M 35 70 L 50 30 L 65 70" stroke="url(#grad)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M 40 55 L 60 55" stroke="url(#grad)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Music note dots -->
+  <circle cx="30" cy="35" r="3" fill="url(#grad)"/>
+  <circle cx="70" cy="35" r="3" fill="url(#grad)"/>
+  <circle cx="50" cy="20" r="3" fill="url(#grad)"/>
+</svg>
