@@ -8,31 +8,37 @@ const musicExamples = [
     title: 'Energetic Electronic',
     genre: 'Electronic',
     duration: '3:24',
+    coverImage: '/images/covers/electronic.webp',
   },
   {
     title: 'Jazz in the Night',
     genre: 'Jazz',
     duration: '4:12',
+    coverImage: '/images/covers/jazz.webp',
   },
   {
     title: 'Orchestral Epic',
     genre: 'Classical',
     duration: '5:03',
+    coverImage: '/images/covers/classical.webp',
   },
   {
     title: 'Lo-Fi Chill Beats',
     genre: 'Lo-Fi',
     duration: '2:58',
+    coverImage: '/images/covers/lofi.webp',
   },
   {
     title: 'Rock Anthem',
     genre: 'Rock',
     duration: '3:45',
+    coverImage: '/images/covers/rock.webp',
   },
   {
     title: 'Hip Hop Groove',
     genre: 'Hip Hop',
     duration: '3:31',
+    coverImage: '/images/covers/hiphop.webp',
   },
 ]
 

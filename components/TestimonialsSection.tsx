@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
+import Image from 'next/image'
 
 const testimonials = [
   {
@@ -9,18 +10,21 @@ const testimonials = [
     role: 'Music Producer',
     content: 'Ace-Step 1.5 has completely transformed my workflow. The quality of generated music is incredible!',
     rating: 5,
+    avatar: '/images/avatars/avatar1.webp',
   },
   {
     name: 'Sarah Chen',
     role: 'Content Creator',
     content: 'Finally, an AI music tool that understands creative vision. Perfect for my YouTube videos.',
     rating: 5,
+    avatar: '/images/avatars/avatar2.webp',
   },
   {
     name: 'Marcus Williams',
     role: 'Indie Artist',
     content: 'The customization options are amazing. I can create unique sounds that match my style perfectly.',
     rating: 5,
+    avatar: '/images/avatars/avatar3.webp',
   },
 ]
 
@@ -67,7 +71,13 @@ export default function TestimonialsSection() {
 
               {/* 用户信息 */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-blue to-neon-purple" />
+                <Image
+                  src={testimonial.avatar}
+                  alt={`${testimonial.name} avatar`}
+                  width={48}
+                  height={48}
+                  className="rounded-full object-cover"
+                />
                 <div>
                   <div className="font-bold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
