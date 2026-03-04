@@ -6,24 +6,28 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'What is Ace-Step 1.5?',
-    answer: 'Ace-Step 1.5 is an advanced AI music generation model that creates professional-quality music based on your descriptions. It uses cutting-edge neural networks to compose unique tracks in seconds.',
+    question: 'Is Ace-Step 1.5 free to use?',
+    answer: 'Yes! Ace-Step 1.5 offers a free tier that lets you generate AI music at no cost. You can create professional-quality tracks from text descriptions without watermarks. Our free plan is perfect for content creators, YouTubers, and musicians exploring AI music generation.',
   },
   {
-    question: 'How does it work?',
-    answer: 'Simply describe the music you want to create using natural language, specify parameters like genre, mood, and tempo, and our AI will generate a unique track for you. You can then customize and download it in various formats.',
+    question: 'How does text to music AI work?',
+    answer: 'Simply describe the music you want using natural language (e.g., "upbeat electronic background music for YouTube videos"), specify parameters like genre, mood, and tempo, and our AI will generate a unique track. You can then customize and download it in various formats including WAV, MP3, and STEM files.',
+  },
+  {
+    question: 'Can I use Ace-Step music for YouTube and commercial projects?',
+    answer: 'Yes! All music generated with Ace-Step 1.5 is royalty-free. Free tier users can use music for personal projects and YouTube (with attribution), while Pro and Enterprise plans include full commercial licenses for monetized content, client work, and business use.',
   },
   {
     question: 'What music genres can I create?',
-    answer: 'Ace-Step 1.5 supports a wide range of genres including electronic, jazz, classical, rock, hip-hop, lo-fi, and many more. You can also blend genres to create unique sounds.',
+    answer: 'Ace-Step 1.5 supports a wide range of genres including electronic, jazz, classical, rock, hip-hop, lo-fi, ambient, background music, and many more. You can also blend genres to create unique sounds. Perfect for videos, podcasts, games, and any content that needs custom music.',
   },
   {
-    question: 'Can I use the generated music commercially?',
-    answer: 'Commercial usage rights depend on your subscription plan. Free plan users can use music for personal projects only, while Pro and Enterprise plans include full commercial licenses.',
+    question: 'Ace-Step vs Suno vs Udio - How does it compare?',
+    answer: 'Ace-Step 1.5 stands out with its text-to-music accuracy, free tier with no watermarks, and faster generation times. While Suno and Udio focus on vocal tracks, Ace-Step excels at instrumental background music perfect for content creators. Our open-source model also means continuous community improvements.',
   },
   {
     question: 'When will Ace-Step 1.5 be available?',
-    answer: "We're currently in final development stages. Sign up for our newsletter to be notified when we launch and get early access to the platform.",
+    answer: "We're currently in final development stages. Sign up for our newsletter to be notified when we launch and get early access to the platform. Early subscribers will receive extended free credits and priority access to new features.",
   },
 ]
 

@@ -3,6 +3,14 @@ import { supabase } from '@/lib/supabase'
 
 export async function POST(request: NextRequest) {
   try {
+    // 检查 Supabase 客户端
+    if (!supabase) {
+      return NextResponse.json(
+        { error: '服务配置错误，请联系管理员' },
+        { status: 503 }
+      )
+    }
+
     const body = await request.json()
     const { email, name } = body
 
@@ -66,6 +74,14 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
+    // 检查 Supabase 客户端
+    if (!supabase) {
+      return NextResponse.json(
+        { error: '服务配置错误' },
+        { status: 503 }
+      )
+    }
+
     const { count, error } = await supabase
       .from('waitlist')
       .select('*', { count: 'exact', head: true })

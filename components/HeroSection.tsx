@@ -44,9 +44,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
         >
-          Create professional-quality music with AI in seconds.
+          <span className="text-white font-semibold">Free AI music generator</span> - Create professional-quality music from text in seconds.
           <br />
-          The most advanced music generation model is coming.
+          Royalty-free tracks for videos, YouTube, and content creators. No watermark.
         </motion.p>
 
         {/* 音乐波形动画 */}
@@ -69,7 +69,7 @@ export default function HeroSection() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Describe the music you want to create..."
+              placeholder="Describe the music you want: e.g., 'upbeat background music for YouTube video'..."
               className="w-full px-6 py-4 bg-black/50 backdrop-blur-sm neon-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue/50"
             />
             <motion.button
@@ -92,7 +92,8 @@ export default function HeroSection() {
           {[
             { icon: Zap, text: 'Generate in Seconds' },
             { icon: Music, text: 'Any Genre' },
-            { icon: Sparkles, text: 'Studio Quality' },
+            { icon: Sparkles, text: 'Free & No Watermark' },
+            { icon: Zap, text: 'Royalty-Free' },
           ].map((item, index) => (
             <div
               key={index}
