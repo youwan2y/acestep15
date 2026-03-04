@@ -24,26 +24,26 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
         <defs>
           {/* 主渐变 */}
           <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#00f5ff">
+            <stop offset="0%" stopColor="#a5b4fc">
               <animate
                 attributeName="stop-color"
-                values="#00f5ff;#bf00ff;#ff006e;#00f5ff"
+                values="#a5b4fc;#c4b5fd;#f9a8d4;#a5b4fc"
                 dur="3s"
                 repeatCount="indefinite"
               />
             </stop>
-            <stop offset="50%" stopColor="#bf00ff">
+            <stop offset="50%" stopColor="#c4b5fd">
               <animate
                 attributeName="stop-color"
-                values="#bf00ff;#ff006e;#00f5ff;#bf00ff"
+                values="#c4b5fd;#f9a8d4;#a5b4fc;#c4b5fd"
                 dur="3s"
                 repeatCount="indefinite"
               />
             </stop>
-            <stop offset="100%" stopColor="#ff006e">
+            <stop offset="100%" stopColor="#f9a8d4">
               <animate
                 attributeName="stop-color"
-                values="#ff006e;#00f5ff;#bf00ff;#ff006e"
+                values="#f9a8d4;#a5b4fc;#c4b5fd;#f9a8d4"
                 dur="3s"
                 repeatCount="indefinite"
               />

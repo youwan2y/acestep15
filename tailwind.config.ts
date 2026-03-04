@@ -23,9 +23,9 @@ const config: Config = {
           900: '#0c4a6e',
         },
         neon: {
-          blue: '#00f5ff',
-          purple: '#bf00ff',
-          pink: '#ff006e',
+          blue: '#a5b4fc',    // 柔和淡蓝 blue-300
+          purple: '#c4b5fd', // 柔和淡紫 violet-300
+          pink: '#f9a8d4',   // 柔和淡粉 pink-300
         }
       },
       animation: {
@@ -34,8 +34,8 @@ const config: Config = {
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(0, 245, 255, 0.5)' },
-          '100%': { boxShadow: '0 0 30px rgba(191, 0, 255, 0.8)' },
+          '0%': { boxShadow: '0 0 20px rgba(165, 180, 252, 0.5)' },
+          '100%': { boxShadow: '0 0 30px rgba(196, 181, 253, 0.8)' },
         }
       },
       backgroundImage: {

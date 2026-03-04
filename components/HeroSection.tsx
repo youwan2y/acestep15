@@ -8,14 +8,14 @@ import { Sparkles, Zap, Music } from 'lucide-react'
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
+    <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden px-4">
       {/* Orb 能量球背景 */}
       <OrbBackground hue={240} backgroundColor="#0a0a0a" />
       
       {/* 增强粒子效果 */}
       <EnhancedParticles />
 
-      <div className="relative z-10 max-w-6xl mx-auto text-center">
+      <div className="relative z-10 max-w-6xl mx-auto text-center pt-28">
         {/* 徽章 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
