@@ -1,9 +1,50 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Mail, Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
 
 export default function CTASection() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!email || !email.includes('@')) {
+      setStatus('error')
+      setMessage('请输入有效的邮箱地址')
+      return
+    }
+
+    setStatus('loading')
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus('success')
+        setMessage('🎉 成功加入等待列表！')
+        setEmail('')
+      } else {
+        setStatus('error')
+        setMessage(data.error || '提交失败，请稍后重试')
+      }
+    } catch (error) {
+      setStatus('error')
+      setMessage('网络错误，请稍后重试')
+    }
+  }
+
   return (
     <section className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
@@ -36,30 +77,65 @@ export default function CTASection() {
               Join the waitlist and be the first to experience the future of music creation with Ace-Step 1.5
             </motion.p>
 
-            <motion.div
+            <motion.form
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl font-semibold text-white flex items-center justify-center gap-2 group"
-              >
-                Join Waitlist
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              <div className="relative flex-1">
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  disabled={status === 'loading'}
+                  className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-neon-blue/50 focus:ring-2 focus:ring-neon-blue/20 transition-all disabled:opacity-50"
+                />
+              </div>
 
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-white/20 rounded-xl font-semibold text-white hover:border-neon-blue/50 transition-colors"
+                type="submit"
+                disabled={status === 'loading'}
+                whileHover={{ scale: status === 'loading' ? 1 : 1.05 }}
+                whileTap={{ scale: status === 'loading' ? 1 : 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl font-semibold text-white flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
               >
-                Learn More
+                {status === 'loading' ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    提交中...
+                  </>
+                ) : (
+                  <>
+                    Join Waitlist
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </motion.button>
-            </motion.div>
+            </motion.form>
+
+            {/* 状态消息 */}
+            {status !== 'idle' && status !== 'loading' && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mt-4 flex items-center justify-center gap-2 ${
+                  status === 'success' ? 'text-green-400' : 'text-red-400'
+                }`}
+              >
+                {status === 'success' ? (
+                  <CheckCircle2 className="w-5 h-5" />
+                ) : (
+                  <AlertCircle className="w-5 h-5" />
+                )}
+                <span className="text-sm">{message}</span>
+              </motion.div>
+            )}
 
             <motion.p
               initial={{ opacity: 0 }}
