@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Check, Zap, Music, Sparkles, Download, Share2 } from 'lucide-react'
-import Link from 'next/link'
 
 const freeFeatures = [
   {
@@ -66,7 +65,7 @@ export default function FreePageContent() {
             <span className="text-neon-blue font-semibold">No watermark. Royalty-free. No credit card required.</span>
           </p>
 
-          <Link href="/#demo">
+          <a href="/#waitlist">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -74,7 +73,7 @@ export default function FreePageContent() {
             >
               Start Creating Free Music →
             </motion.button>
-          </Link>
+          </a>
         </motion.div>
 
         {/* Features Grid */}
@@ -225,7 +224,7 @@ export default function FreePageContent() {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of content creators using free AI music
             </p>
-            <Link href="/#demo">
+            <a href="/#waitlist">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -233,7 +232,7 @@ export default function FreePageContent() {
               >
                 Start Creating Free →
               </motion.button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

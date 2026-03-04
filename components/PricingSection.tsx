@@ -110,17 +110,18 @@ export default function PricingSection() {
               </ul>
 
               {/* CTA 按钮 */}
-              <motion.button
+              <motion.a
+                href="#waitlist"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full py-4 rounded-xl font-semibold transition-all mt-auto ${
+                className={`w-full py-4 rounded-xl font-semibold transition-all mt-auto block text-center cursor-pointer ${
                   plan.popular
                     ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white'
                     : 'border border-white/20 text-white hover:border-neon-blue/50 hover:bg-white/5'
                 }`}
               >
-                Coming Soon
-              </motion.button>
+                Join Waitlist
+              </motion.a>
             </motion.div>
           ))}
         </div>

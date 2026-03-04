@@ -33,13 +33,14 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <motion.button
+            <motion.a
+              href="#waitlist"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white text-sm"
+              className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white text-sm cursor-pointer"
             >
               Get Started
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,13 +70,15 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <motion.button
+            <motion.a
+              href="#waitlist"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white"
+              className="block w-full mt-4 px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white text-center cursor-pointer"
+              onClick={() => setIsOpen(false)}
             >
               Get Started
-            </motion.button>
+            </motion.a>
           </motion.div>
         )}
       </div>

@@ -72,13 +72,14 @@ export default function HeroSection() {
               placeholder="Describe the music you want: e.g., 'upbeat background music for YouTube video'..."
               className="w-full px-6 py-4 bg-black/50 backdrop-blur-sm neon-border rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neon-blue/50"
             />
-            <motion.button
-              className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white"
+            <motion.a
+              href="#waitlist"
+              className="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-semibold text-white cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Coming Soon
-            </motion.button>
+              Join Waitlist
+            </motion.a>
           </div>
         </motion.div>
 

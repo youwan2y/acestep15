@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { BookOpen, Sparkles, Zap, Music, Lightbulb, Check } from 'lucide-react'
-import Link from 'next/link'
 
 const promptExamples = [
   {
@@ -324,7 +323,7 @@ export default function TutorialContent() {
             <p className="text-gray-300 mb-6">
               Put your new knowledge into practice. Try these prompt examples now!
             </p>
-            <Link href="/#demo">
+            <a href="/#waitlist">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -332,7 +331,7 @@ export default function TutorialContent() {
               >
                 Start Creating Music →
               </motion.button>
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>
