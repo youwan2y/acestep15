@@ -10,21 +10,21 @@ const testimonials = [
     role: 'Music Producer',
     content: 'Ace-Step 1.5 has completely transformed my workflow. The quality of generated music is incredible!',
     rating: 5,
-    avatar: '/images/avatars/avatar1.webp',
+    avatar: '/images/avatars/avatar1.svg',
   },
   {
     name: 'Sarah Chen',
     role: 'Content Creator',
     content: 'Finally, an AI music tool that understands creative vision. Perfect for my YouTube videos.',
     rating: 5,
-    avatar: '/images/avatars/avatar2.webp',
+    avatar: '/images/avatars/avatar2.svg',
   },
   {
     name: 'Marcus Williams',
     role: 'Indie Artist',
     content: 'The customization options are amazing. I can create unique sounds that match my style perfectly.',
     rating: 5,
-    avatar: '/images/avatars/avatar3.webp',
+    avatar: '/images/avatars/avatar3.svg',
   },
 ]
 

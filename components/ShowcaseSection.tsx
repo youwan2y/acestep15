@@ -7,38 +7,44 @@ const musicExamples = [
   {
     title: 'Energetic Electronic',
     genre: 'Electronic',
-    duration: '3:24',
-    coverImage: '/images/covers/electronic.webp',
+    duration: '3:46',
+    coverImage: '/images/covers/electronic.jpg',
+    audioSrc: '/audio/electronic.mp3',
   },
   {
     title: 'Jazz in the Night',
     genre: 'Jazz',
-    duration: '4:12',
-    coverImage: '/images/covers/jazz.webp',
+    duration: '1:50',
+    coverImage: '/images/covers/jazz.jpg',
+    audioSrc: '/audio/jazz.mp3',
   },
   {
     title: 'Orchestral Epic',
     genre: 'Classical',
-    duration: '5:03',
-    coverImage: '/images/covers/classical.webp',
+    duration: '3:31',
+    coverImage: '/images/covers/classical.jpg',
+    audioSrc: '/audio/classical.mp3',
   },
   {
     title: 'Lo-Fi Chill Beats',
     genre: 'Lo-Fi',
-    duration: '2:58',
-    coverImage: '/images/covers/lofi.webp',
+    duration: '3:39',
+    coverImage: '/images/covers/lofi.jpg',
+    audioSrc: '/audio/lofi.mp3',
   },
   {
     title: 'Rock Anthem',
     genre: 'Rock',
-    duration: '3:45',
-    coverImage: '/images/covers/rock.webp',
+    duration: '3:23',
+    coverImage: '/images/covers/rock.jpg',
+    audioSrc: '/audio/rock.mp3',
   },
   {
     title: 'Hip Hop Groove',
     genre: 'Hip Hop',
-    duration: '3:31',
-    coverImage: '/images/covers/hiphop.webp',
+    duration: '2:01',
+    coverImage: '/images/covers/hiphop.jpg',
+    audioSrc: '/audio/hiphop.mp3',
   },
 ]
 
@@ -60,14 +66,18 @@ export default function ShowcaseSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 交错网格布局 */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {musicExamples.map((music, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              className={`${
+                index % 2 === 0 ? 'md:-mt-20' : 'md:mt-20'
+              }`}
             >
               <MusicCard {...music} />
             </motion.div>

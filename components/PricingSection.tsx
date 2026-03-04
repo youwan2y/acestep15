@@ -66,7 +66,7 @@ export default function PricingSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
           {plans.map((plan, index) => (
             <motion.div
               key={index}
@@ -74,9 +74,9 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative p-8 rounded-2xl backdrop-blur-sm ${
+              className={`relative p-8 rounded-2xl backdrop-blur-sm flex flex-col ${
                 plan.popular
-                  ? 'neon-border bg-black/50 glow-box scale-105'
+                  ? 'neon-border bg-black/50 glow-box'
                   : 'border border-white/10 bg-black/30'
               }`}
             >
@@ -100,7 +100,7 @@ export default function PricingSection() {
               </div>
 
               {/* 功能列表 */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-neon-blue mt-0.5 flex-shrink-0" />
@@ -111,12 +111,12 @@ export default function PricingSection() {
 
               {/* CTA 按钮 */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full py-3 rounded-xl font-semibold transition-all ${
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`w-full py-4 rounded-xl font-semibold transition-all mt-auto ${
                   plan.popular
                     ? 'bg-gradient-to-r from-neon-blue to-neon-purple text-white'
-                    : 'border border-white/20 text-white hover:border-neon-blue/50'
+                    : 'border border-white/20 text-white hover:border-neon-blue/50 hover:bg-white/5'
                 }`}
               >
                 Coming Soon

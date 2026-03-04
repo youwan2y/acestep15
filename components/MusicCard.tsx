@@ -2,17 +2,30 @@
 
 import { motion } from 'framer-motion'
 import { Play, Pause } from 'lucide-react'
-import { useState } from 'react'
+import Image from 'next/image'
+import { useState, useRef, useEffect } from 'react'
+import React from 'react'
 
 interface MusicCardProps {
   title: string
   genre: string
   duration: string
   coverImage?: string
+  audioSrc?: string
 }
 
-export default function MusicCard({ title, genre, duration, coverImage }: MusicCardProps) {
+export default function MusicCard({ title, genre, duration, coverImage, audioSrc }: MusicCardProps) {
   const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef<HTMLAudioElement>(null)
+
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    const handleEnded = () => setIsPlaying(false)
+    audio.addEventListener('ended', handleEnded)
+    return () => audio.removeEventListener('ended', handleEnded)
+  }, [])
 
   return (
     <motion.div
@@ -20,14 +33,35 @@ export default function MusicCard({ title, genre, duration, coverImage }: MusicC
       whileHover={{ scale: 1.05 }}
       transition={{ type: 'spring', stiffness: 300 }}
     >
+      {audioSrc && <audio ref={audioRef} src={audioSrc} preload="metadata" />}
       {/* 封面 */}
       <div className="relative aspect-square mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-pink/20">
+        {coverImage ? (
+          <Image
+            src={coverImage}
+            alt={`${title} cover`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-300"
+            priority={false}
+          />
+        ) : null}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/20 to-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
           <motion.div
             className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple flex items-center justify-center cursor-pointer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => setIsPlaying(!isPlaying)}
+            onClick={() => {
+              if (audioRef.current) {
+                if (isPlaying) {
+                  audioRef.current.pause()
+                } else {
+                  audioRef.current.play()
+                }
+                setIsPlaying(!isPlaying)
+              }
+            }}
           >
             {isPlaying ? (
               <Pause className="w-8 h-8 text-white" />
