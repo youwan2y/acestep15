@@ -22,22 +22,9 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 检查邮箱是否已存在
-    const { data: existingUser, error: checkError } = await supabase
-      .from('waitlist')
-      .select('email')
-      .eq('email', email)
-      .single()
-
-    if (existingUser) {
-      return NextResponse.json(
-        { error: '该邮箱已在等待列表中' },
-        { status: 400 }
-      )
-    }
-
-    // 插入新记录
-    const { data, error } = await supabase
+    // 直接插入，依赖数据库唯一约束处理重复邮箱
+    // 注意：当前 RLS 禁止匿名 select，因此不要在这里链式 .select()
+    const { error } = await supabase
       .from('waitlist')
       .insert([
         {
@@ -46,9 +33,16 @@ export async function POST(request: NextRequest) {
           created_at: new Date().toISOString(),
         },
       ])
-      .select()
 
     if (error) {
+      // Postgres unique_violation
+      if (error.code === '23505') {
+        return NextResponse.json(
+          { error: '该邮箱已在等待列表中' },
+          { status: 409 }
+        )
+      }
+
       console.error('Supabase error:', error)
       return NextResponse.json(
         { error: '提交失败，请稍后重试' },
@@ -59,7 +53,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         message: '成功加入等待列表！',
-        data: data[0],
       },
       { status: 201 }
     )

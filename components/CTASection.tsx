@@ -29,7 +29,10 @@ export default function CTASection() {
         body: JSON.stringify({ email }),
       })
 
-      const data = await response.json()
+      const contentType = response.headers.get('content-type') || ''
+      const data = contentType.includes('application/json')
+        ? await response.json()
+        : null
 
       if (response.ok) {
         setStatus('success')
@@ -37,9 +40,10 @@ export default function CTASection() {
         setEmail('')
       } else {
         setStatus('error')
-        setMessage(data.error || '提交失败，请稍后重试')
+        setMessage(data?.error || `提交失败（HTTP ${response.status}）`)
       }
     } catch (error) {
+      console.error('Waitlist request failed:', error)
       setStatus('error')
       setMessage('网络错误，请稍后重试')
     }
