@@ -23,9 +23,9 @@ const config: Config = {
           900: '#0c4a6e',
         },
         neon: {
-          blue: '#a5b4fc',    // 柔和淡蓝 blue-300
-          purple: '#c4b5fd', // 柔和淡紫 violet-300
-          pink: '#f9a8d4',   // 柔和淡粉 pink-300
+          blue: '#a5b4fc',    // soft light blue blue-300
+          purple: '#c4b5fd', // soft light violet violet-300
+          pink: '#f9a8d4',   // soft light pink pink-300
         }
       },
       animation: {

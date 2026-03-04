@@ -55,7 +55,7 @@ export default function EnhancedParticles() {
         />
       ))}
 
-      {/* 底部光芒 */}
+      {/* Bottom glow */}
       <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-neon-blue/20 to-transparent" />
     </div>
   )

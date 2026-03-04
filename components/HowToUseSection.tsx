@@ -52,13 +52,13 @@ export default function HowToUseSection() {
               transition={{ delay: index * 0.2 }}
               className="relative"
             >
-              {/* 连接线 */}
+              {/* Connection line */}
               {index < steps.length - 1 && (
                 <div className="hidden md:block absolute top-16 left-1/2 w-full h-0.5 bg-gradient-to-r from-neon-blue/50 to-transparent" />
               )}
 
               <div className="text-center">
-                {/* 步骤编号 */}
+                {/* Step number */}
                 <div className="relative inline-block mb-6">
                   <div className="w-32 h-32 rounded-full neon-border flex items-center justify-center bg-black/50 backdrop-blur-sm">
                     <item.icon className="w-12 h-12 text-neon-blue" />

@@ -6,17 +6,17 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { serviceKey } = body
 
-    // 验证 service key 是否提供
+    // Validate service key is provided
     if (!serviceKey) {
       return NextResponse.json({
         success: false,
-        error: '请提供 Service Role Key'
+        error: 'Please provide Service Role Key'
       }, { status: 400 })
     }
 
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
 
-    // 使用 service role key 创建客户端
+    // Create client using service role key
     const supabase = createClient(supabaseUrl, serviceKey, {
       auth: {
         autoRefreshToken: false,
@@ -24,12 +24,12 @@ export async function POST(request: NextRequest) {
       }
     })
 
-    // 创建 waitlist 表的 SQL
+    // SQL to create waitlist table
     const sql = `
-      -- 创建 uuid-ossp 扩展（如果不存在）
+      -- Create uuid-ossp extension (if not exists)
       CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-      -- 创建 waitlist 表
+      -- Create waitlist table
       CREATE TABLE IF NOT EXISTS waitlist (
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         email VARCHAR(255) UNIQUE NOT NULL,
@@ -38,19 +38,19 @@ export async function POST(request: NextRequest) {
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
       );
 
-      -- 创建索引
+      -- Create indexes
       CREATE INDEX IF NOT EXISTS waitlist_email_idx ON waitlist(email);
       CREATE INDEX IF NOT EXISTS waitlist_created_at_idx ON waitlist(created_at);
 
-      -- 启用 RLS
+      -- Enable RLS
       ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;
 
-      -- 删除已存在的策略（如果有）
+      -- Drop existing policies (if any)
       DROP POLICY IF EXISTS "Allow anonymous insert" ON waitlist;
       DROP POLICY IF EXISTS "Deny anonymous select" ON waitlist;
       DROP POLICY IF EXISTS "Allow service role select" ON waitlist;
 
-      -- 创建新策略
+      -- Create new policies
       CREATE POLICY "Allow anonymous insert" ON waitlist
         FOR INSERT TO anon WITH CHECK (true);
 
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
         FOR SELECT TO service_role USING (true);
     `
 
-    // 使用 Management API 执行 SQL
+    // Execute SQL using Management API
     const response = await fetch(`${supabaseUrl}/rest/v1/rpc/exec`, {
       method: 'POST',
       headers: {
@@ -74,48 +74,48 @@ export async function POST(request: NextRequest) {
 
     if (!response.ok) {
       const errorText = await response.text()
-      console.error('执行 SQL 失败:', errorText)
+      console.error('Failed to execute SQL:', errorText)
 
-      // 如果 RPC 方法不可用，尝试直接使用 Supabase 客户端
-      // 测试表是否已存在
+      // If RPC method is unavailable, try using Supabase client directly
+      // Test if table already exists
       const { error: testError } = await supabase
         .from('waitlist')
         .select('id')
         .limit(1)
 
       if (testError && testError.code === '42P01') {
-        // 表不存在，返回手动执行的说明
+        // Table doesn't exist, return instructions for manual execution
         return NextResponse.json({
           success: false,
-          error: '自动创建失败，需要手动执行 SQL',
+          error: 'Auto-creation failed, need to execute SQL manually',
           sql: sql,
-          instructions: '请在 Supabase SQL Editor 中手动执行 SQL'
+          instructions: 'Please execute SQL manually in Supabase SQL Editor'
         }, { status: 500 })
       } else if (testError) {
-        // 其他错误
+        // Other errors
         return NextResponse.json({
           success: false,
-          error: `数据库错误: ${testError.message}`
+          error: `Database error: ${testError.message}`
         }, { status: 500 })
       }
 
-      // 表已存在
+      // Table already exists
       return NextResponse.json({
         success: true,
-        message: '数据库表已存在！'
+        message: 'Database table already exists!'
       })
     }
 
     return NextResponse.json({
       success: true,
-      message: '数据库表创建成功！'
+      message: 'Database table created successfully!'
     })
 
   } catch (error) {
-    console.error('设置错误:', error)
+    console.error('Setup error:', error)
     return NextResponse.json({
       success: false,
-      error: error instanceof Error ? error.message : '未知错误'
+      error: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 })
   }
 }

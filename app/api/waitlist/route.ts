@@ -3,10 +3,10 @@ import { supabase } from '@/lib/supabase'
 
 export async function POST(request: NextRequest) {
   try {
-    // 检查 Supabase 客户端
+    // Check Supabase client
     if (!supabase) {
       return NextResponse.json(
-        { error: '服务配置错误，请联系管理员' },
+        { error: 'Service configuration error, please contact administrator' },
         { status: 503 }
       )
     }
@@ -14,16 +14,16 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { email, name } = body
 
-    // 验证邮箱
+    // Validate email
     if (!email || !email.includes('@')) {
       return NextResponse.json(
-        { error: '请提供有效的邮箱地址' },
+        { error: 'Please provide a valid email address' },
         { status: 400 }
       )
     }
 
-    // 直接插入，依赖数据库唯一约束处理重复邮箱
-    // 注意：当前 RLS 禁止匿名 select，因此不要在这里链式 .select()
+    // Insert directly, rely on database unique constraint to handle duplicate emails
+    // Note: Current RLS prohibits anonymous select, so don't chain .select() here
     const { error } = await supabase
       .from('waitlist')
       .insert([
@@ -38,28 +38,28 @@ export async function POST(request: NextRequest) {
       // Postgres unique_violation
       if (error.code === '23505') {
         return NextResponse.json(
-          { error: '该邮箱已在等待列表中' },
+          { error: 'This email is already on the waitlist' },
           { status: 409 }
         )
       }
 
       console.error('Supabase error:', error)
       return NextResponse.json(
-        { error: '提交失败，请稍后重试' },
+        { error: 'Submission failed, please try again later' },
         { status: 500 }
       )
     }
 
     return NextResponse.json(
       {
-        message: '成功加入等待列表！',
+        message: 'Successfully joined the waitlist!',
       },
       { status: 201 }
     )
   } catch (error) {
     console.error('API error:', error)
     return NextResponse.json(
-      { error: '服务器错误，请稍后重试' },
+      { error: 'Server error, please try again later' },
       { status: 500 }
     )
   }
@@ -67,10 +67,10 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
-    // 检查 Supabase 客户端
+    // Check Supabase client
     if (!supabase) {
       return NextResponse.json(
-        { error: '服务配置错误' },
+        { error: 'Service configuration error' },
         { status: 503 }
       )
     }
@@ -82,7 +82,7 @@ export async function GET() {
     if (error) {
       console.error('Supabase error:', error)
       return NextResponse.json(
-        { error: '获取数据失败' },
+        { error: 'Failed to fetch data' },
         { status: 500 }
       )
     }
@@ -94,7 +94,7 @@ export async function GET() {
   } catch (error) {
     console.error('API error:', error)
     return NextResponse.json(
-      { error: '服务器错误' },
+      { error: 'Server error' },
       { status: 500 }
     )
   }

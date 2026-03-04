@@ -80,26 +80,26 @@ export default function PricingSection() {
                   : 'border border-white/10 bg-black/30'
               }`}
             >
-              {/* 热门标签 */}
+              {/* Popular badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-sm font-bold text-white">
                   Most Popular
                 </div>
               )}
 
-              {/* 计划名称 */}
+              {/* Plan name */}
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-400">{plan.description}</p>
               </div>
 
-              {/* 价格 */}
+              {/* Price */}
               <div className="mb-6">
                 <span className="text-5xl font-black text-white">{plan.price}</span>
                 <span className="text-gray-400">{plan.period}</span>
               </div>
 
-              {/* 功能列表 */}
+              {/* Feature list */}
               <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-2">
@@ -109,7 +109,7 @@ export default function PricingSection() {
                 ))}
               </ul>
 
-              {/* CTA 按钮 */}
+              {/* CTA button */}
               <motion.a
                 href="#waitlist"
                 whileHover={{ scale: 1.02 }}

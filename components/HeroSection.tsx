@@ -9,14 +9,14 @@ import { Sparkles, Zap, Music } from 'lucide-react'
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden px-4">
-      {/* Orb 能量球背景 */}
+      {/* Orb energy ball background */}
       <OrbBackground hue={240} backgroundColor="#0a0a0a" />
       
-      {/* 增强粒子效果 */}
+      {/* Enhanced particle effects */}
       <EnhancedParticles />
 
       <div className="relative z-10 max-w-6xl mx-auto text-center pt-28">
-        {/* 徽章 */}
+        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function HeroSection() {
           <span className="text-sm font-medium text-gray-300">Next-Gen AI Music Generation</span>
         </motion.div>
 
-        {/* 标题 */}
+        {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function HeroSection() {
           <span className="text-gradient">Ace-Step 1.5</span>
         </motion.h1>
 
-        {/* 副标题 */}
+        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function HeroSection() {
           Royalty-free tracks for videos, YouTube, and content creators. No watermark.
         </motion.p>
 
-        {/* 音乐波形动画 */}
+        {/* Music wave animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -59,7 +59,7 @@ export default function HeroSection() {
           <MusicWaveAnimation />
         </motion.div>
 
-        {/* 输入框 */}
+        {/* Input box */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* 特性标签 */}
+        {/* Feature tags */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* 底部渐变 */}
+      {/* Bottom gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
     </section>
   )

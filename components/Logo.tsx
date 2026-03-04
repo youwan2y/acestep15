@@ -22,7 +22,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
         className="cursor-pointer"
       >
         <defs>
-          {/* 主渐变 */}
+          {/* Main gradient */}
           <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#a5b4fc">
               <animate
@@ -50,7 +50,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
             </stop>
           </linearGradient>
 
-          {/* 辉光效果 */}
+          {/* Glow effect */}
           <filter id="glow">
             <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
             <feMerge>
@@ -60,7 +60,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
           </filter>
         </defs>
 
-        {/* 外圈 - 音波圆环 */}
+        {/* Outer ring - Sound wave circle */}
         <circle
           cx="50"
           cy="50"
@@ -79,7 +79,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
           />
         </circle>
 
-        {/* 中圈 */}
+        {/* Middle ring */}
         <circle
           cx="50"
           cy="50"
@@ -90,9 +90,9 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
           opacity="0.5"
         />
 
-        {/* A 字母 - 主形状 */}
+        {/* Letter A - Main shape */}
         <g filter="url(#glow)">
-          {/* 左侧竖线 */}
+          {/* Left vertical line */}
           <path
             d="M 35 70 L 50 30 L 50 30"
             stroke="url(#logoGradient)"
@@ -101,7 +101,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
             fill="none"
           />
 
-          {/* 右侧竖线 */}
+          {/* Right vertical line */}
           <path
             d="M 65 70 L 50 30"
             stroke="url(#logoGradient)"
@@ -110,7 +110,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
             fill="none"
           />
 
-          {/* 横线 */}
+          {/* Horizontal line */}
           <path
             d="M 40 55 L 60 55"
             stroke="url(#logoGradient)"
@@ -120,7 +120,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
           />
         </g>
 
-        {/* 音符装饰 - 小圆点 */}
+        {/* Music note decoration - Small dots */}
         <circle cx="30" cy="35" r="3" fill="url(#logoGradient)" opacity="0.8">
           <animate
             attributeName="cy"
@@ -150,7 +150,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
           />
         </circle>
 
-        {/* 音波线 */}
+        {/* Sound wave lines */}
         <g opacity="0.6">
           <line
             x1="20"
@@ -202,7 +202,7 @@ export default function Logo({ size = 40, showText = true }: LogoProps) {
         </g>
       </motion.svg>
 
-      {/* Logo 文字 */}
+      {/* Logo text */}
       {showText && (
         <div className="flex flex-col">
           <motion.span

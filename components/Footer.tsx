@@ -40,7 +40,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-6 gap-8 mb-8">
-          {/* Logo & 描述 */}
+          {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="text-2xl font-black mb-4">
               <span className="text-gradient">Ace-Step 1.5</span>
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* 链接 */}
+          {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="font-bold text-white mb-4">{category}</h3>
@@ -82,7 +82,7 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* 底部 */}
+        {/* Bottom */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Ace-Step 1.5. All rights reserved.

@@ -56,20 +56,20 @@ export default function TestimonialsSection() {
               transition={{ delay: index * 0.1 }}
               className="relative p-8 neon-border rounded-2xl bg-black/30 backdrop-blur-sm"
             >
-              {/* 引号图标 */}
+              {/* Quote icon */}
               <Quote className="absolute top-4 right-4 w-8 h-8 text-neon-blue/20" />
 
-              {/* 评分 */}
+              {/* Rating */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
-              {/* 内容 */}
+              {/* Content */}
               <p className="text-gray-300 mb-6">{testimonial.content}</p>
 
-              {/* 用户信息 */}
+              {/* User info */}
               <div className="flex items-center gap-3">
                 <Image
                   src={testimonial.avatar}

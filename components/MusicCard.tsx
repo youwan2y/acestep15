@@ -34,7 +34,7 @@ export default function MusicCard({ title, genre, duration, coverImage, audioSrc
       transition={{ type: 'spring', stiffness: 300 }}
     >
       {audioSrc && <audio ref={audioRef} src={audioSrc} preload="metadata" />}
-      {/* 封面 */}
+      {/* Cover */}
       <div className="relative aspect-square mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-pink/20">
         {coverImage ? (
           <Image
@@ -71,7 +71,7 @@ export default function MusicCard({ title, genre, duration, coverImage, audioSrc
           </motion.div>
         </div>
 
-        {/* 音乐波形指示器 */}
+        {/* Music wave indicator */}
         {isPlaying && (
           <div className="absolute bottom-4 left-4 right-4 flex items-center gap-0.5">
             {Array.from({ length: 20 }).map((_, i) => (
@@ -92,7 +92,7 @@ export default function MusicCard({ title, genre, duration, coverImage, audioSrc
         )}
       </div>
 
-      {/* 信息 */}
+      {/* Info */}
       <div>
         <h3 className="font-bold text-white mb-1 truncate">{title}</h3>
         <div className="flex items-center justify-between text-sm text-gray-400">

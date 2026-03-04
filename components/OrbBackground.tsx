@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion'
 
 interface OrbProps {
-  /** 轨道颜色，0-360 色相值 */
+  /** Orb color, 0-360 hue value */
   hue?: number
-  /** 悬浮时的旋转速度 */
+  /** Rotation speed on hover */
   rotateOnHover?: boolean
-  /** 背景颜色 */
+  /** Background color */
   backgroundColor?: string
 }
 
@@ -21,7 +21,7 @@ export default function Orb({
       className="absolute inset-0 overflow-hidden pointer-events-none"
       style={{ backgroundColor }}
     >
-      {/* 主能量球 */}
+      {/* Main energy orb */}
       <motion.div
         className="absolute w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full"
         style={{
@@ -47,7 +47,7 @@ export default function Orb({
         }}
       />
 
-      {/* 第二个能量球 - 辅助色 */}
+      {/* Second energy orb - secondary color */}
       <motion.div
         className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full"
         style={{
@@ -71,7 +71,7 @@ export default function Orb({
         }}
       />
 
-      {/* 第三个能量球 - 强调色 */}
+      {/* Third energy orb - accent color */}
       <motion.div
         className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full"
         style={{
@@ -95,7 +95,7 @@ export default function Orb({
         }}
       />
 
-      {/* 光晕层 */}
+      {/* Glow layer */}
       <div
         className="absolute inset-0"
         style={{

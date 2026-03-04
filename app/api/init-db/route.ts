@@ -5,9 +5,9 @@ export async function POST(request: NextRequest) {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-    // 创建 waitlist 表的 SQL
+    // SQL to create waitlist table
     const createTableSQL = `
--- 创建 waitlist 表
+-- Create waitlist table
 CREATE TABLE IF NOT EXISTS waitlist (
   id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
   email VARCHAR(255) UNIQUE NOT NULL,
@@ -16,14 +16,14 @@ CREATE TABLE IF NOT EXISTS waitlist (
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- 创建索引
+-- Create indexes
 CREATE INDEX IF NOT EXISTS waitlist_email_idx ON waitlist(email);
 CREATE INDEX IF NOT EXISTS waitlist_created_at_idx ON waitlist(created_at);
 
--- 启用 RLS
+-- Enable RLS
 ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;
 
--- 创建策略
+-- Create policies
 DROP POLICY IF EXISTS "Allow anonymous insert" ON waitlist;
 CREATE POLICY "Allow anonymous insert" ON waitlist
   FOR INSERT TO anon WITH CHECK (true);
@@ -37,8 +37,8 @@ CREATE POLICY "Allow service role select" ON waitlist
   FOR SELECT TO service_role USING (true);
 `
 
-    // 尝试使用 Supabase REST API 执行 SQL
-    // 注意：这需要 postgres 权限，通常 anon key 没有这个权限
+    // Try to execute SQL using Supabase REST API
+    // Note: This requires postgres permissions, usually anon key doesn't have this permission
     const response = await fetch(`${supabaseUrl}/rest/v1/rpc/exec`, {
       method: 'POST',
       headers: {
@@ -52,32 +52,32 @@ CREATE POLICY "Allow service role select" ON waitlist
     })
 
     if (!response.ok) {
-      // 如果失败，返回需要手动执行的提示
+      // If failed, return instructions for manual execution
       return NextResponse.json({
         success: false,
         needsManualSetup: true,
-        message: '需要手动执行 SQL 来创建数据库表',
+        message: 'Need to manually execute SQL to create database table',
         sql: createTableSQL,
         instructions: [
-          '1. 访问 Supabase SQL Editor:',
+          '1. Visit Supabase SQL Editor:',
           `   ${supabaseUrl.replace('/rest/v1', '')}/project/nfmdyerjomsrwxijlhpf/sql`,
-          '2. 复制上面的 SQL 语句',
-          '3. 粘贴到编辑器中并点击 Run'
+          '2. Copy the SQL statement above',
+          '3. Paste it into the editor and click Run'
         ]
       }, { status: 200 })
     }
 
     return NextResponse.json({
       success: true,
-      message: '数据库表创建成功！'
+      message: 'Database table created successfully!'
     })
   } catch (error) {
-    console.error('初始化错误:', error)
+    console.error('Initialization error:', error)
     return NextResponse.json({
       success: false,
       needsManualSetup: true,
-      message: '需要手动执行 SQL 来创建数据库表',
-      error: error instanceof Error ? error.message : '未知错误'
+      message: 'Need to manually execute SQL to create database table',
+      error: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 200 })
   }
 }

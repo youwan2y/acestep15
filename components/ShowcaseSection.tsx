@@ -66,7 +66,7 @@ export default function ShowcaseSection() {
           </p>
         </motion.div>
 
-        {/* 交错网格布局 */}
+        {/* Staggered grid layout */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {musicExamples.map((music, index) => (
             <motion.div

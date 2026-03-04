@@ -14,7 +14,7 @@ export default function CTASection() {
 
     if (!email || !email.includes('@')) {
       setStatus('error')
-      setMessage('请输入有效的邮箱地址')
+      setMessage('Please enter a valid email address')
       return
     }
 
@@ -36,16 +36,16 @@ export default function CTASection() {
 
       if (response.ok) {
         setStatus('success')
-        setMessage('🎉 成功加入等待列表！')
+        setMessage('🎉 Successfully joined the waitlist!')
         setEmail('')
       } else {
         setStatus('error')
-        setMessage(data?.error || `提交失败（HTTP ${response.status}）`)
+        setMessage(data?.error || `Submission failed (HTTP ${response.status})`)
       }
     } catch (error) {
       console.error('Waitlist request failed:', error)
       setStatus('error')
-      setMessage('网络错误，请稍后重试')
+      setMessage('Network error, please try again later')
     }
   }
 
@@ -58,7 +58,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           className="relative neon-border rounded-3xl bg-gradient-to-br from-black/80 via-black/60 to-black/80 backdrop-blur-xl p-12 md:p-16 glow-box text-center overflow-hidden"
         >
-          {/* 背景装饰 */}
+          {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/10 via-neon-purple/10 to-neon-pink/10" />
 
           <div className="relative z-10">
@@ -112,7 +112,7 @@ export default function CTASection() {
                 {status === 'loading' ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    提交中...
+                    Submitting...
                   </>
                 ) : (
                   <>
@@ -123,7 +123,7 @@ export default function CTASection() {
               </motion.button>
             </motion.form>
 
-            {/* 状态消息 */}
+            {/* Status message */}
             {status !== 'idle' && status !== 'loading' && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}

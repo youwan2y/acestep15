@@ -12,7 +12,7 @@ export default function SetupPage() {
   const handleSetup = async () => {
     if (!serviceKey.trim()) {
       setStatus('error')
-      setMessage('请输入 Service Role Key')
+      setMessage('Please enter Service Role Key')
       return
     }
 
@@ -32,15 +32,15 @@ export default function SetupPage() {
 
       if (response.ok && data.success) {
         setStatus('success')
-        setMessage('✅ 数据库表创建成功！Waitlist 功能已就绪！')
+        setMessage('✅ Database table created successfully! Waitlist feature is ready!')
         setServiceKey('')
       } else {
         setStatus('error')
-        setMessage(data.error || '创建失败，请检查 Service Role Key 是否正确')
+        setMessage(data.error || 'Creation failed, please check if Service Role Key is correct')
       }
     } catch (error) {
       setStatus('error')
-      setMessage('网络错误，请稍后重试')
+      setMessage('Network error, please try again later')
     }
   }
 
@@ -61,8 +61,8 @@ export default function SetupPage() {
             >
               <Database className="w-8 h-8 text-white" />
             </motion.div>
-            <h1 className="text-3xl font-bold text-gradient mb-2">数据库设置</h1>
-            <p className="text-gray-400">自动创建 Waitlist 数据库表</p>
+            <h1 className="text-3xl font-bold text-gradient mb-2">Database Setup</h1>
+            <p className="text-gray-400">Automatically create Waitlist database table</p>
           </div>
 
           {/* Instructions */}
@@ -70,11 +70,11 @@ export default function SetupPage() {
             <div className="flex items-start gap-3 mb-4">
               <Key className="w-5 h-5 text-neon-blue mt-0.5" />
               <div>
-                <h3 className="font-semibold text-white mb-2">获取 Service Role Key</h3>
+                <h3 className="font-semibold text-white mb-2">Get Service Role Key</h3>
                 <ol className="text-sm text-gray-300 space-y-2">
-                  <li>1. 访问 Supabase Dashboard API 设置页面</li>
-                  <li>2. 找到 <code className="bg-white/10 px-2 py-0.5 rounded">service_role</code> key</li>
-                  <li>3. 复制并粘贴到下方输入框</li>
+                  <li>1. Visit Supabase Dashboard API settings page</li>
+                  <li>2. Find the <code className="bg-white/10 px-2 py-0.5 rounded">service_role</code> key</li>
+                  <li>3. Copy and paste it into the input box below</li>
                 </ol>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function SetupPage() {
               className="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors text-sm"
             >
               <ExternalLink className="w-4 h-4" />
-              打开 Supabase API 设置
+              Open Supabase API Settings
             </a>
           </div>
 
@@ -116,12 +116,12 @@ export default function SetupPage() {
             {status === 'loading' ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                正在创建数据库表...
+                Creating database table...
               </>
             ) : (
               <>
                 <Database className="w-5 h-5" />
-                创建数据库表
+                Create Database Table
               </>
             )}
           </motion.button>
@@ -147,8 +147,8 @@ export default function SetupPage() {
           {/* Warning */}
           <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
             <p className="text-xs text-yellow-400">
-              ⚠️ <strong>安全提示：</strong>Service Role Key 拥有完全权限，请勿分享或提交到公开代码库。
-              此页面仅在设置时使用，设置完成后请删除此页面。
+              ⚠️ <strong>Security Warning:</strong> Service Role Key has full permissions. Do not share or commit it to public repositories.
+              This page is for setup only, please delete it after completion.
             </p>
           </div>
         </div>

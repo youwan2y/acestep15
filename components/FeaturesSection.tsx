@@ -65,7 +65,7 @@ export default function FeaturesSection() {
               <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
 
-              {/* 动画装饰 */}
+              {/* Animation decoration */}
               <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className={`h-1 w-20 bg-gradient-to-r ${feature.gradient} rounded-full`} />
               </div>
