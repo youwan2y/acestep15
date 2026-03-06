@@ -8,6 +8,13 @@ const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow'
 const URLS = [
   'https://ace-step15.top',
   'https://ace-step15.top/free',
+  'https://ace-step15.top/youtube/shorts',
+  'https://ace-step15.top/youtube/background-music',
+  'https://ace-step15.top/youtube/monetization',
+  'https://ace-step15.top/beginners/guide',
+  'https://ace-step15.top/beginners/no-experience',
+  'https://ace-step15.top/use-cases/meditation',
+  'https://ace-step15.top/use-cases/study-focus',
   'https://ace-step15.top/tutorial/text-to-music',
   'https://ace-step15.top/#features',
   'https://ace-step15.top/#examples',
