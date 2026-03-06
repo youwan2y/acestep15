@@ -6,25 +6,28 @@ const footerLinks = {
   Product: [
     { name: 'Features', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
+    { name: 'Free Generator', href: '/free' },
     { name: 'Examples', href: '#examples' },
-    { name: 'API', href: '#' },
   ],
-  Company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Press', href: '#' },
+  YouTube: [
+    { name: 'Background Music', href: '/youtube/background-music' },
+    { name: 'Shorts Music', href: '/youtube/shorts' },
+  ],
+  Beginners: [
+    { name: 'Complete Guide', href: '/beginners/guide' },
+    { name: 'Tutorial', href: '/tutorial/text-to-music' },
+  ],
+  UseCases: [
+    { name: 'Meditation Music', href: '/use-cases/meditation' },
+    { name: 'Study & Focus', href: '/use-cases/study-focus' },
   ],
   Resources: [
     { name: 'Documentation', href: '#' },
-    { name: 'Tutorials', href: '#' },
     { name: 'Support', href: '#faq' },
-    { name: 'Contact', href: '#' },
   ],
   Legal: [
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
-    { name: 'Cookie Policy', href: '#' },
   ],
 }
 

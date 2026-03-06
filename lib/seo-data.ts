@@ -1,0 +1,875 @@
+import {
+  Music,
+  Zap,
+  Shield,
+  Download,
+  TrendingUp,
+  DollarSign,
+  BookOpen,
+  Sparkles,
+  Brain,
+  Target,
+  Heart,
+  Headphones,
+  Mic,
+} from 'lucide-react'
+
+// YouTube Shorts 页面配置
+export const youTubeShortsConfig = {
+  metadata: {
+    title: 'Free Background Music for YouTube Shorts | Ace-Step 1.5',
+    description:
+      'Create viral YouTube Shorts with free AI background music. Trending sounds, no copyright issues. Perfect for 15-60 second videos.',
+    keywords: [
+      'youtube shorts background music free',
+      'shorts music generator',
+      'free music for youtube shorts',
+      'trending shorts background music',
+      'shorts sound effects',
+      'youtube shorts music no copyright',
+    ],
+  },
+  hero: {
+    badge: 'YouTube Shorts Creators',
+    title: 'YouTube Shorts Background Music',
+    subtitle:
+      'Create viral YouTube Shorts with free AI-generated background music. No copyright claims, perfect for 15-60 second videos.',
+    stats: [
+      { value: '2,400+', label: 'Monthly Searches' },
+      { value: '↑37%', label: 'Trend Growth' },
+      { value: '15-60s', label: 'Perfect Length' },
+    ],
+    ctaText: 'Create Shorts Music Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Zap,
+      title: 'Viral Trends',
+      description: 'Generate music matching current Shorts trends and viral sounds',
+    },
+    {
+      icon: Music,
+      title: 'Perfect Length',
+      description: 'Optimized for 15-60 second Shorts format with seamless loops',
+    },
+    {
+      icon: Shield,
+      title: 'No Copyright',
+      description: 'AI-generated music means no copyright claims or strikes',
+    },
+    {
+      icon: Download,
+      title: 'Instant Download',
+      description: 'Download your track immediately in high-quality MP3 format',
+    },
+  ],
+  steps: [
+    {
+      title: 'Choose Your Style',
+      description:
+        'Select from trending Shorts music styles: upbeat, dance, funny, inspirational',
+    },
+    {
+      title: 'AI Generates Music',
+      description:
+        'Our AI creates a unique 15-60 second track matching your style in seconds',
+    },
+    {
+      title: 'Download & Upload',
+      description: 'Download your music and add it to your Shorts video instantly',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Upbeat Dance',
+      prompt: 'Upbeat electronic dance music for YouTube Shorts, energetic and catchy, 30 seconds',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Funny Moments',
+      prompt: 'Funny quirky background music with silly sound effects for comedy Shorts',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Inspirational',
+      prompt: 'Inspirational motivational music building up to epic climax, perfect for transformation Shorts',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Chill Vibes',
+      prompt: 'Lo-fi chill beats for aesthetic and lifestyle Shorts, relaxing and smooth',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Action & Energy',
+      prompt: 'High-energy action music with driving beats for sports and fitness Shorts',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Emotional',
+      prompt: 'Emotional piano melody with subtle strings for touching moment Shorts',
+      difficulty: 'advanced' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Can I use this music for YouTube Shorts monetization?',
+      answer:
+        'Yes! AI-generated music is royalty-free. Free tier users can use music in Shorts with attribution. Pro users get full commercial license for monetized content.',
+    },
+    {
+      question: 'What length should Shorts music be?',
+      answer:
+        'YouTube Shorts are 15-60 seconds. Our AI generates music optimized for these lengths with seamless loops for longer videos.',
+    },
+    {
+      question: 'Will I get copyright claims on Shorts?',
+      answer:
+        'No. AI-generated music is unique to you. Unlike library music, you won\'t face copyright claims, Content ID matches, or revenue sharing.',
+    },
+    {
+      question: 'What music styles work best for viral Shorts?',
+      answer:
+        'Trending styles include upbeat dance, lo-fi chill, funny quirky sounds, and inspirational builds. Our AI stays updated with current viral trends.',
+    },
+  ],
+}
+
+// YouTube Background Music 页面配置
+export const youTubeBackgroundMusicConfig = {
+  metadata: {
+    title: 'Free YouTube Background Music No Copyright | Ace-Step 1.5',
+    description:
+      'Download free AI-generated background music for YouTube videos. No copyright claims, royalty-free, monetization-safe. Create custom tracks in seconds.',
+    keywords: [
+      'youtube background music free no copyright',
+      'free music for youtube videos no copyright',
+      'free ai music for youtube no claim',
+      'royalty-free youtube music',
+      'no copyright background music',
+      'youtube safe music',
+    ],
+  },
+  hero: {
+    badge: 'YouTube Creators',
+    title: 'YouTube Background Music',
+    subtitle:
+      'Free AI-generated background music for YouTube videos. No copyright claims, 100% monetization-safe. Create unlimited custom tracks.',
+    stats: [
+      { value: '4,840+', label: 'Monthly Searches' },
+      { value: '0', label: 'Copyright Claims' },
+      { value: '100%', label: 'Revenue Yours' },
+    ],
+    ctaText: 'Create Background Music Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Shield,
+      title: 'No Copyright Claims',
+      description: 'AI-generated music means no Content ID matches or copyright strikes',
+    },
+    {
+      icon: DollarSign,
+      title: '100% Revenue',
+      description: 'Keep all your YouTube ad revenue - no revenue sharing required',
+    },
+    {
+      icon: Music,
+      title: 'Any Genre',
+      description: 'Electronic, lo-fi, ambient, cinematic, rock, classical, and more',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Monetization-Safe',
+      description: 'Safe for YouTube Partner Program and monetized channels',
+    },
+  ],
+  steps: [
+    {
+      title: 'Describe Your Music',
+      description:
+        'Type what you need: "calm ambient background music for tutorial videos"',
+    },
+    {
+      title: 'AI Generates in Seconds',
+      description:
+        'Our AI creates a unique track based on your description in under 30 seconds',
+    },
+    {
+      title: 'Download & Use',
+      description:
+        'Download your track without watermarks and use it in your YouTube videos',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Tutorial Videos',
+      prompt: 'Calm ambient background music for YouTube tutorial videos, non-distracting, steady rhythm',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Vlogs & Lifestyle',
+      prompt: 'Upbeat happy background music for lifestyle vlogs, cheerful and positive vibes',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Tech Reviews',
+      prompt: 'Modern electronic background music for tech review videos, futuristic and clean',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Gaming Content',
+      prompt: 'Energetic gaming background music with electronic beats, exciting and dynamic',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Educational',
+      prompt: 'Soft piano background music for educational videos, inspiring and motivational',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Productivity',
+      prompt: 'Lo-fi chill beats for productivity and study videos, relaxing and focused',
+      difficulty: 'easy' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Is this music really safe for YouTube monetization?',
+      answer:
+        'Yes! AI-generated music is unique and royalty-free. Unlike library music, there\'s no Content ID matching. You keep 100% of your ad revenue.',
+    },
+    {
+      question: 'What\'s the difference between free and Pro for YouTube?',
+      answer:
+        'Free tier requires attribution in video description. Pro tier ($9/month) includes full commercial license, no attribution required, and WAV/STEM formats.',
+    },
+    {
+      question: 'Can I use the same track in multiple videos?',
+      answer:
+        'Yes! Once generated, you can use your track in unlimited YouTube videos. Each generation is unique to you.',
+    },
+    {
+      question: 'Will my videos get flagged by Content ID?',
+      answer:
+        'No. AI-generated music doesn\'t exist in Content ID databases. Your videos won\'t get flagged, claimed, or demonetized due to music.',
+    },
+  ],
+}
+
+// Beginners Guide 页面配置
+export const beginnersGuideConfig = {
+  metadata: {
+    title: 'AI Music Generator for Complete Beginners | Ace-Step 1.5',
+    description:
+      'Start creating music with AI - no experience needed. Complete beginner\'s guide to AI music generation. Make your first track in 5 minutes.',
+    keywords: [
+      'ai music generator for complete beginners',
+      'make music without knowing theory',
+      'beginner music maker',
+      'ai music tutorial',
+      'how to use ai music generator',
+      'music creation for beginners',
+    ],
+  },
+  hero: {
+    badge: 'Complete Beginners',
+    title: 'AI Music Generator for Beginners',
+    subtitle:
+      'Create professional music without any music theory knowledge. Our AI handles everything - just describe what you want.',
+    stats: [
+      { value: 'KD 8', label: 'Lowest Difficulty' },
+      { value: '5 min', label: 'First Track' },
+      { value: '920+', label: 'Monthly Searches' },
+    ],
+    ctaText: 'Start Your First Track →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: BookOpen,
+      title: 'No Theory Required',
+      description: 'Skip years of music theory - AI handles harmony, melody, and rhythm for you',
+    },
+    {
+      icon: Sparkles,
+      title: 'Beginner-Friendly',
+      description: 'Simple text prompts like "happy upbeat pop song" are all you need',
+    },
+    {
+      icon: Zap,
+      title: '5-Minute Start',
+      description: 'From zero to your first music track in just 5 minutes',
+    },
+    {
+      icon: Download,
+      title: 'Instant Results',
+      description: 'Download your track immediately and use it anywhere',
+    },
+  ],
+  steps: [
+    {
+      title: 'Describe Your Idea',
+      description:
+        'Type a simple description: "relaxing piano music" or "energetic electronic beat"',
+    },
+    {
+      title: 'AI Creates Music',
+      description:
+        'Our AI generates a complete track with melody, harmony, and rhythm in seconds',
+    },
+    {
+      title: 'Download & Learn',
+      description:
+        'Download your track and experiment with different styles to learn',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Simple Piano',
+      prompt: 'Relaxing piano music, slow tempo, peaceful and calm',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Upbeat Pop',
+      prompt: 'Happy upbeat pop song with catchy melody, major key',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Electronic Beat',
+      prompt: 'Energetic electronic dance beat, fast tempo, synth sounds',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Chill Lo-fi',
+      prompt: 'Chill lo-fi hip hop beat, relaxed, study music vibes',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Cinematic',
+      prompt: 'Epic cinematic orchestral music, dramatic strings, building intensity',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Acoustic Guitar',
+      prompt: 'Warm acoustic guitar strumming, folk style, gentle and organic',
+      difficulty: 'easy' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Do I need to know music theory?',
+      answer:
+        'No! AI music generation requires zero music theory knowledge. Just describe the mood, style, or feeling you want, and AI handles all the technical aspects.',
+    },
+    {
+      question: 'What if I\'ve never made music before?',
+      answer:
+        'Perfect! This is designed for complete beginners. Start with simple descriptions like "happy music" or "sad piano" and experiment from there.',
+    },
+    {
+      question: 'How long does it take to learn?',
+      answer:
+        'Minutes, not years. You can create your first track in under 5 minutes. The more you experiment, the better you\'ll get at describing your ideas.',
+    },
+    {
+      question: 'Can I make any genre?',
+      answer:
+        'Yes! Electronic, pop, rock, classical, hip-hop, ambient, jazz, folk - any genre you can describe, AI can create.',
+    },
+  ],
+}
+
+// Beginners No Experience 页面配置
+export const beginnersNoExperienceConfig = {
+  metadata: {
+    title: 'How to Create Music with No Experience | Ace-Step 1.5',
+    description:
+      'Create professional music without any experience. AI-powered music generation for absolute beginners. From idea to track in 30 seconds.',
+    keywords: [
+      'how to create music with no experience',
+      'music creation for beginners',
+      'no experience music maker',
+      'easy music creation',
+      'make music without skills',
+      'music generator no experience',
+    ],
+  },
+  hero: {
+    badge: 'Zero Experience Needed',
+    title: 'Create Music with No Experience',
+    subtitle:
+      'Turn your ideas into professional music tracks without any prior experience. AI does the heavy lifting - you just describe what you want.',
+    stats: [
+      { value: '1,400+', label: 'Monthly Searches' },
+      { value: '30 sec', label: 'Generation Time' },
+      { value: '37%', label: 'Higher Conversion' },
+    ],
+    ctaText: 'Create Music Now →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Sparkles,
+      title: 'Zero Learning Curve',
+      description: 'No instruments, no software, no experience - just your ideas',
+    },
+    {
+      icon: Zap,
+      title: '30-Second Generation',
+      description: 'From text description to complete music track in half a minute',
+    },
+    {
+      icon: Download,
+      title: 'Professional Quality',
+      description: 'Studio-quality output that sounds like it was made by pros',
+    },
+    {
+      icon: Shield,
+      title: 'Royalty-Free',
+      description: 'Use your music anywhere - YouTube, podcasts, games, and more',
+    },
+  ],
+  steps: [
+    {
+      title: 'Imagine Your Music',
+      description:
+        'Think of a mood, style, or feeling: "epic movie soundtrack" or "chill beach vibes"',
+    },
+    {
+      title: 'Type Your Description',
+      description:
+        'Write a simple text prompt describing your music idea in plain English',
+    },
+    {
+      title: 'Get Your Track',
+      description:
+        'AI generates your music in 30 seconds - download and use it immediately',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Mood-Based',
+      prompt: 'Happy feel-good music that makes people smile',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Scene-Based',
+      prompt: 'Background music for a cozy coffee shop scene',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Emotion-Based',
+      prompt: 'Melancholic piano piece for a sad emotional moment',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Activity-Based',
+      prompt: 'Energetic workout music for fitness and exercise',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Style-Based',
+      prompt: 'Jazz music with saxophone and piano, smooth and sophisticated',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Story-Based',
+      prompt: 'Adventure music for exploring a magical forest',
+      difficulty: 'medium' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Can someone with zero musical ability really create music?',
+      answer:
+        'Absolutely! AI music generation requires no musical ability whatsoever. If you can describe what you want to hear, you can create it.',
+    },
+    {
+      question: 'What if I don\'t know music terminology?',
+      answer:
+        'No problem! Use everyday language: "happy", "sad", "energetic", "calm". AI understands natural descriptions, not technical terms.',
+    },
+    {
+      question: 'Will the music sound amateur?',
+      answer:
+        'Not at all! AI generates professional-quality tracks with proper mixing, mastering, and production. Your music will sound like it was made by experienced producers.',
+    },
+    {
+      question: 'Can I try different styles to learn?',
+      answer:
+        'Yes! Experiment freely. Try different genres, moods, and styles. Each generation teaches you how to write better prompts.',
+    },
+  ],
+}
+
+// Meditation Music 页面配置
+export const meditationMusicConfig = {
+  metadata: {
+    title: 'Free Background Music for Meditation | Ace-Step 1.5',
+    description:
+      'Generate custom meditation music with AI. Relaxing ambient sounds, binaural beats, nature music. Perfect for meditation apps, yoga, wellness videos.',
+    keywords: [
+      'free background music for meditation',
+      'meditation music generator',
+      'relaxation music ai',
+      'yoga background music',
+      'mindfulness music',
+      'ambient meditation music',
+    ],
+  },
+  hero: {
+    badge: 'Wellness & Meditation',
+    title: 'Meditation Music Generator',
+    subtitle:
+      'Create custom meditation and relaxation music with AI. Ambient soundscapes, binaural beats, nature-inspired tracks for wellness apps and videos.',
+    stats: [
+      { value: '1,900+', label: 'Monthly Searches' },
+      { value: '432Hz', label: 'Healing Frequency' },
+      { value: '∞', label: 'Customizable' },
+    ],
+    ctaText: 'Create Meditation Music →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Sparkles,
+      title: 'Custom Frequencies',
+      description: 'Generate music at specific frequencies: 432Hz, 528Hz, binaural beats',
+    },
+    {
+      icon: Music,
+      title: 'Ambient Soundscapes',
+      description: 'Create deep, immersive soundscapes perfect for meditation sessions',
+    },
+    {
+      icon: Zap,
+      title: 'Any Duration',
+      description: 'Generate tracks of any length - 5 minutes to 1 hour meditation sessions',
+    },
+    {
+      icon: Download,
+      title: 'Royalty-Free',
+      description: 'Use in meditation apps, yoga classes, wellness videos without licensing fees',
+    },
+  ],
+  steps: [
+    {
+      title: 'Choose Your Style',
+      description:
+        'Select meditation style: deep ambient, nature sounds, binaural beats, or guided meditation background',
+    },
+    {
+      title: 'Set Parameters',
+      description:
+        'Optionally specify frequency (432Hz, 528Hz), duration, and instruments (singing bowls, chimes)',
+    },
+    {
+      title: 'Generate & Download',
+      description:
+        'AI creates your meditation track with seamless loops for extended sessions',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Deep Ambient',
+      prompt: 'Deep ambient meditation music with soft pads and drones, 432Hz tuning, very slow and peaceful',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Nature Fusion',
+      prompt: 'Meditation music with gentle piano and nature sounds, forest ambience, birds chirping softly',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Binaural Beats',
+      prompt: 'Theta wave binaural beats meditation, 6Hz frequency, deep relaxation, minimal ambient background',
+      difficulty: 'advanced' as const,
+    },
+    {
+      keyword: 'Singing Bowls',
+      prompt: 'Tibetan singing bowl meditation music, harmonic overtones, healing vibrations, slow rhythms',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Yoga Flow',
+      prompt: 'Gentle yoga background music, soft ambient textures, steady rhythm, perfect for vinyasa flow',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Sleep Music',
+      prompt: 'Deep sleep meditation music, very slow ambient, delta waves, no sudden changes, continuous drift',
+      difficulty: 'medium' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Can I generate music at specific frequencies like 432Hz?',
+      answer:
+        'Yes! You can specify frequencies like 432Hz (healing), 528Hz (love frequency), or binaural beat frequencies (alpha, theta, delta waves).',
+    },
+    {
+      question: 'Is this music good for meditation apps?',
+      answer:
+        'Perfect for meditation apps! AI generates unique tracks, so you won\'t have the same music as other apps. Plus, royalty-free licensing means no ongoing fees.',
+    },
+    {
+      question: 'How long can meditation tracks be?',
+      answer:
+        'Any length you need. Generate 5-minute tracks with seamless loops, or create longer 30-60 minute sessions for deep meditation.',
+    },
+    {
+      question: 'What meditation styles work best?',
+      answer:
+        'All styles work: deep ambient, nature soundscapes, binaural beats, guided meditation backgrounds, yoga music, sleep music, and more.',
+    },
+  ],
+}
+
+// Study Focus Music 页面配置
+export const studyFocusMusicConfig = {
+  metadata: {
+    title: 'Study Music Generator No Vocals | Ace-Step 1.5',
+    description:
+      'Create focus-enhancing study music with AI. Instrumental lo-fi, ambient, classical music. Boost productivity and concentration. Perfect for students.',
+    keywords: [
+      'study music generator no vocals',
+      'free music for podcast intro',
+      'focus music ai',
+      'concentration music',
+      'lo-fi study beats',
+      'instrumental study music',
+    ],
+  },
+  hero: {
+    badge: 'Students & Focus',
+    title: 'Study Music Generator',
+    subtitle:
+      'Generate focus-enhancing instrumental music for studying, working, and concentration. Lo-fi beats, ambient textures, and calm background music.',
+    stats: [
+      { value: '2,420+', label: 'Monthly Searches' },
+      { value: '0', label: 'Vocals/Distractions' },
+      { value: '↑40%', label: 'Focus Boost' },
+    ],
+    ctaText: 'Create Study Music →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Zap,
+      title: 'No Vocals',
+      description: 'Pure instrumental music - no distracting lyrics or voices',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Focus-Enhancing',
+      description: 'Optimized tempos and frequencies for concentration and productivity',
+    },
+    {
+      icon: Music,
+      title: 'Multiple Styles',
+      description: 'Lo-fi hip-hop, ambient, classical, electronic - choose your focus style',
+    },
+    {
+      icon: Download,
+      title: 'Podcast-Ready',
+      description: 'Perfect for podcast intros, study playlists, and background content',
+    },
+  ],
+  steps: [
+    {
+      title: 'Choose Study Style',
+      description:
+        'Select focus music style: lo-fi beats, ambient, classical, or electronic',
+    },
+    {
+      title: 'Set Parameters',
+      description:
+        'Specify tempo (60-80 BPM optimal for focus), duration, and mood',
+    },
+    {
+      title: 'Generate & Focus',
+      description:
+        'Download your study track and boost your concentration and productivity',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Lo-fi Study',
+      prompt: 'Lo-fi hip hop study beats, 70 BPM, chill and relaxing, no vocals, soft vinyl crackle',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Ambient Focus',
+      prompt: 'Ambient electronic music for deep focus, slow evolving textures, no beats, atmospheric',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Classical Study',
+      prompt: 'Soft classical piano music for studying, slow tempo, minimal dynamics, peaceful',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Podcast Intro',
+      prompt: 'Upbeat podcast intro music, 15 seconds, professional and engaging, instrumental only',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Work Music',
+      prompt: 'Productivity background music, steady electronic beat, motivating but not distracting, 80 BPM',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Reading Music',
+      prompt: 'Soft acoustic guitar ambient music for reading, very calm, no percussion, gentle melodies',
+      difficulty: 'easy' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Why no vocals in study music?',
+      answer:
+        'Vocals and lyrics distract your brain\'s language processing centers. Instrumental music keeps your focus on studying, not singing along.',
+    },
+    {
+      question: 'What\'s the best tempo for focus music?',
+      answer:
+        '60-80 BPM (beats per minute) matches your heart rate and promotes deep focus. Our AI optimizes for these tempos automatically.',
+    },
+    {
+      question: 'Can I use this for podcast intros?',
+      answer:
+        'Yes! Perfect for podcast intros, transitions, and background music. Royalty-free means you can monetize your podcast without licensing issues.',
+    },
+    {
+      question: 'Does study music actually help concentration?',
+      answer:
+        'Research shows the right background music can improve focus by up to 40%. Calm, instrumental music without lyrics works best for most people.',
+    },
+  ],
+}
+
+// YouTube Monetization 页面配置
+export const youTubeMonetizationConfig = {
+  metadata: {
+    title: 'No Copyright Music for YouTube Monetization | Ace-Step 1.5',
+    description:
+      'Monetize your YouTube channel with AI-generated music. No copyright claims, 100% revenue yours. Complete guide to copyright-safe content creation.',
+    keywords: [
+      'no copyright music for youtube monetization',
+      'monetization-safe music',
+      'youtube copyright free music',
+      'commercial use music',
+      'youtube partner program music',
+      'safe music for ypp',
+    ],
+  },
+  hero: {
+    badge: 'YouTube Monetization',
+    title: 'No Copyright Music for YouTube Monetization',
+    subtitle:
+      'Keep 100% of your YouTube revenue with AI-generated music. No copyright claims, no Content ID matches, no revenue sharing. Safe for YouTube Partner Program.',
+    stats: [
+      { value: '1,100+', label: 'Monthly Searches' },
+      { value: '$1.30', label: 'High CPC' },
+      { value: '100%', label: 'Your Revenue' },
+    ],
+    ctaText: 'Get Monetization-Safe Music →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: DollarSign,
+      title: '100% Revenue',
+      description: 'Keep all your YouTube ad revenue - no splits, no licensing fees',
+    },
+    {
+      icon: Shield,
+      title: 'No Content ID',
+      description: 'AI-generated music doesn\'t trigger Content ID matches or claims',
+    },
+    {
+      icon: TrendingUp,
+      title: 'YPP-Safe',
+      description: 'Safe for YouTube Partner Program and monetized channels',
+    },
+    {
+      icon: Zap,
+      title: 'Commercial License',
+      description: 'Full commercial usage rights with Pro tier for business creators',
+    },
+  ],
+  steps: [
+    {
+      title: 'Generate Your Music',
+      description:
+        'Create custom AI music for your YouTube videos - any genre, any style',
+    },
+    {
+      title: 'Choose License',
+      description:
+        'Free tier: attribution required. Pro tier: full commercial license, no attribution',
+    },
+    {
+      title: 'Monetize Safely',
+      description:
+        'Use your music in monetized YouTube videos and keep 100% of revenue',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Tutorial Content',
+      prompt: 'Background music for tutorial videos, calm and professional, non-distracting',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Product Reviews',
+      prompt: 'Modern background music for product review videos, upbeat and engaging',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Vlog Content',
+      prompt: 'Versatile vlog background music, cheerful and energetic, works for daily content',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Gaming Videos',
+      prompt: 'Energetic gaming background music, electronic style, exciting and dynamic',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Educational',
+      prompt: 'Inspiring background music for educational content, motivational and positive',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Tech Channel',
+      prompt: 'Futuristic tech background music, modern electronic, clean and professional',
+      difficulty: 'medium' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Will AI music affect my YouTube monetization?',
+      answer:
+        'No! AI-generated music is royalty-free and doesn\'t trigger Content ID. Your videos remain fully monetizable with 100% revenue to you.',
+    },
+    {
+      question: 'What license do I need for monetized channels?',
+      answer:
+        'Free tier requires attribution in description. Pro tier ($9/month) includes full commercial license with no attribution required.',
+    },
+    {
+      question: 'Can I use this for YouTube Partner Program application?',
+      answer:
+        'Yes! AI-generated music is safe for YPP applications. No copyright issues that could prevent monetization approval.',
+    },
+    {
+      question: 'What if I get a false copyright claim?',
+      answer:
+        'Rare, but if it happens, dispute it. AI music is unique to you. We provide documentation proving your ownership and rights.',
+    },
+  ],
+}
