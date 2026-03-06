@@ -12,6 +12,10 @@ import {
   Heart,
   Headphones,
   Mic,
+  GraduationCap,
+  Clock,
+  Volume2,
+  Smile,
 } from 'lucide-react'
 
 // YouTube Shorts 页面配置
@@ -870,6 +874,190 @@ export const youTubeMonetizationConfig = {
       question: 'What if I get a false copyright claim?',
       answer:
         'Rare, but if it happens, dispute it. AI music is unique to you. We provide documentation proving your ownership and rights.',
+    },
+  ],
+}
+
+// Calming Classroom Music 页面配置
+export const calmingClassroomMusicConfig = {
+  metadata: {
+    title: 'Calming Classroom Music Generator for Teachers | Ace-Step 1.5',
+    description:
+      'Generate free calming classroom music with AI. Calm music for classroom independent work, transitions, tests, and brain breaks. No copyright, instant download.',
+    keywords: [
+      'calming classroom music',
+      'calming music for classroom',
+      'calm classroom music',
+      'calm music for classroom',
+      'classroom music generator',
+      'background music for teachers',
+    ],
+  },
+  hero: {
+    badge: 'Teachers & Educators',
+    title: 'Calming Classroom Music Generator',
+    subtitle:
+      'Create custom calming music for your classroom in seconds. AI-generated instrumental tracks for independent work, transitions, tests, and brain breaks — royalty-free.',
+    stats: [
+      { value: '28K+', label: 'Monthly Searches' },
+      { value: 'KD 41', label: 'Beatable Difficulty' },
+      { value: '100%', label: 'Royalty-Free' },
+    ],
+    ctaText: 'Generate Classroom Music Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: GraduationCap,
+      title: 'Made for Teachers',
+      description:
+        'Purpose-built for K–12 classrooms: no lyrics, calm tempos, and focus-enhancing frequencies',
+    },
+    {
+      icon: Clock,
+      title: 'Instant Generation',
+      description:
+        'Get your calming classroom track in under 30 seconds — ready before the bell rings',
+    },
+    {
+      icon: Volume2,
+      title: 'No Distractions',
+      description:
+        'Purely instrumental music — no vocals or lyrics that pull students away from tasks',
+    },
+    {
+      icon: Smile,
+      title: 'Reduces Anxiety',
+      description:
+        'Research-backed: calming music lowers heart rate, reduces outbursts, and improves focus',
+    },
+  ],
+  whenToUse: [
+    {
+      moment: 'Morning Entry',
+      description:
+        'Set a calm tone as students arrive. Soft nature sounds or gentle piano signal it\'s time to settle in and begin the day.',
+      icon: '🌅',
+      musicType: 'Soft piano, gentle acoustic guitar',
+    },
+    {
+      moment: 'Independent Work',
+      description:
+        'Classical or lo-fi instrumental music keeps students focused during reading, writing, or math. Avoid anything with lyrics.',
+      icon: '📖',
+      musicType: 'Classical (Mozart, Beethoven), lo-fi beats',
+    },
+    {
+      moment: 'Transitions',
+      description:
+        'Replace countdowns with a calming "transition track." Students learn to move when the music changes — without verbal reminders.',
+      icon: '🔄',
+      musicType: 'Steady ambient, soft instrumental',
+    },
+    {
+      moment: 'Test Time',
+      description:
+        'Quiet background music reduces test anxiety. Keep volume low and avoid sudden changes in tempo or dynamics.',
+      icon: '📝',
+      musicType: 'Very soft classical, minimal ambient',
+    },
+    {
+      moment: 'Brain Breaks',
+      description:
+        'After high-energy activities or recess, calming music helps students regulate and refocus quickly.',
+      icon: '🧠',
+      musicType: 'Nature sounds, gentle acoustic',
+    },
+  ],
+  steps: [
+    {
+      title: 'Describe Your Classroom Moment',
+      description:
+        'Type what you need: "calm background music for independent reading" or "soft piano for morning entry"',
+    },
+    {
+      title: 'AI Generates in Seconds',
+      description:
+        'Ace-Step creates a unique instrumental track optimized for focus and calm — no lyrics, right tempo',
+    },
+    {
+      title: 'Play or Download',
+      description:
+        'Instantly play your track in the classroom or download it for offline use — royalty-free',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Morning Entry',
+      prompt: 'Soft gentle piano for classroom morning entry, welcoming and calm, slow tempo, no percussion',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Independent Reading',
+      prompt: 'Calm classical background music for reading, Mozart-style, soft strings, no vocals, 60 BPM',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Test / Assessment',
+      prompt: 'Very quiet ambient music for test-taking, minimal, barely audible, no drums, stress-reducing',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Transitions',
+      prompt: 'Gentle acoustic guitar transition music for classroom, 2 minutes, steady and predictable tempo',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Brain Break',
+      prompt: 'Calming nature-inspired music after recess, soft flute with birds, grounding and peaceful',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Group Work',
+      prompt: 'Lo-fi chill background music for group work, soft beats, focused but light energy, instrumental',
+      difficulty: 'easy' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'What is calming classroom music and why do teachers use it?',
+      answer:
+        'Calming classroom music is instrumental background music played during lessons to reduce student anxiety, improve focus, and ease transitions. Research from Harvard Health shows it can lower heart rate and reduce classroom outbursts. Teachers use it during independent work, morning entry, tests, and brain breaks.',
+    },
+    {
+      question: 'What type of calm music for classroom works best?',
+      answer:
+        'The best calm music for classroom use is always instrumental — no lyrics, as vocals distract language processing. Top choices include classical (Mozart, Beethoven), lo-fi beats, acoustic guitar, and nature sounds. Keep tempo between 60–80 BPM to match a relaxed heart rate.',
+    },
+    {
+      question: 'How is this different from searching YouTube for calming classroom music?',
+      answer:
+        'YouTube videos are fixed. With Ace-Step, you generate custom calming music for classroom moments — specific tempo, instruments, and duration. No ads, no copyright claims, and you can create unique tracks for morning entry vs. test time vs. brain breaks.',
+    },
+    {
+      question: 'Can I use this calming music for classroom activities without copyright issues?',
+      answer:
+        'Yes! AI-generated music is royalty-free. Unlike YouTube videos or Spotify playlists, you own the track you generate. Use it freely in your classroom, school events, or even educational YouTube videos.',
+    },
+    {
+      question: 'Does calm classroom music really improve student behavior?',
+      answer:
+        'Yes — multiple studies support it. Calming music can regulate breathing and lower heart rate, leading to fewer outbursts and better attention spans. Many teachers report students settle in faster when the same calming track plays daily, because it becomes a routine signal.',
+    },
+    {
+      question: 'How do I use calming music for classroom transitions?',
+      answer:
+        'Play a consistent "transition song" whenever students need to change activities. Over 1–2 weeks, students associate the music with the transition and start moving without verbal reminders. Generate a 2–3 minute gentle instrumental track and use it consistently every day.',
+    },
+    {
+      question: 'Is this suitable for all grade levels?',
+      answer:
+        'Absolutely. Calming classroom music works from kindergarten to high school. Younger students respond well to nature sounds and simple melodies; older students often prefer lo-fi beats or soft classical. Generate different tracks for different grade levels and classroom moods.',
+    },
+    {
+      question: 'What\'s the difference between calming classroom music and calm music for classroom?',
+      answer:
+        'Both terms describe the same thing: soft, instrumental background music for educational settings. Whether you search "calming classroom music", "calm music for classroom", or "calming music for classroom" — the need is the same, and Ace-Step generates the perfect track for any of these scenarios.',
     },
   ],
 }
