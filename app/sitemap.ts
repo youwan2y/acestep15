@@ -92,5 +92,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    // Alternatives pages — low competition, high-intent traffic
+    {
+      url: 'https://ace-step15.top/alternatives/mureka',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // VS comparison pages — decision-stage traffic
+    {
+      url: 'https://ace-step15.top/vs/acestep-vs-mureka',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://ace-step15.top/vs/acestep-vs-suno',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Use case pages — niche, low competition
+    {
+      url: 'https://ace-step15.top/use-cases/podcast',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://ace-step15.top/use-cases/capcut',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 }

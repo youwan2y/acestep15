@@ -16,6 +16,14 @@ import {
   Clock,
   Volume2,
   Smile,
+  CheckCircle,
+  XCircle,
+  GitCompare,
+  Radio,
+  Video,
+  Cpu,
+  Globe,
+  Unlock,
 } from 'lucide-react'
 
 // YouTube Shorts 页面配置
@@ -1058,6 +1066,606 @@ export const calmingClassroomMusicConfig = {
       question: 'What\'s the difference between calming classroom music and calm music for classroom?',
       answer:
         'Both terms describe the same thing: soft, instrumental background music for educational settings. Whether you search "calming classroom music", "calm music for classroom", or "calming music for classroom" — the need is the same, and Ace-Step generates the perfect track for any of these scenarios.',
+    },
+  ],
+}
+
+// ─── Mureka AI Alternative 页面配置 ───────────────────────────────────────────
+export const murekaAlternativeConfig = {
+  hero: {
+    badge: 'Mureka AI Alternative',
+    title: 'The Best Free Mureka AI Alternative in 2026',
+    subtitle:
+      'Looking for a Mureka AI alternative? ACE-Step 1.5 is the open-source music generator that\'s faster, free forever, and runs locally — no subscription required.',
+    stats: [
+      { value: '100%', label: 'Free & Open Source' },
+      { value: '20s', label: 'Song Generation Speed' },
+      { value: '50+', label: 'Languages Supported' },
+    ],
+    ctaText: 'Try ACE-Step Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Unlock,
+      title: 'Free Forever',
+      description:
+        'Unlike Mureka\'s paid subscription plans, ACE-Step 1.5 is 100% open-source and free — no credit limits, no paywalls.',
+    },
+    {
+      icon: Cpu,
+      title: 'Runs Locally',
+      description:
+        'Run ACE-Step on your own hardware. Your music stays private — no data sent to any server. Mureka is cloud-only.',
+    },
+    {
+      icon: Zap,
+      title: '10× Faster Generation',
+      description:
+        'Generate a full song in under 20 seconds on consumer GPU. Mureka\'s cloud queue can take 1–3 minutes.',
+    },
+    {
+      icon: Globe,
+      title: '50+ Languages',
+      description:
+        'ACE-Step supports vocals and lyrics in 50+ languages out of the box. Mureka supports 10 languages.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Describe Your Music',
+      description: 'Type a text prompt like "upbeat pop song with female vocals, summer vibes"',
+    },
+    {
+      title: 'AI Generates in Seconds',
+      description: 'ACE-Step 1.5 creates a full structured song with verses, chorus, and bridge',
+    },
+    {
+      title: 'Edit & Customize',
+      description: 'Repaint sections, edit lyrics, or generate vocal covers — features Mureka lacks',
+    },
+    {
+      title: 'Download & Use Anywhere',
+      description: 'Export royalty-free music with zero licensing fees or attribution required',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Pop with Vocals',
+      prompt: 'Upbeat pop song with female vocals, summer vibes, catchy chorus, 3 minutes',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Hip-Hop Beat',
+      prompt: 'Trap beat with 808s, dark atmosphere, slow tempo, instrumental, suitable for rap',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Cinematic Score',
+      prompt: 'Epic cinematic orchestral music, building tension, perfect for trailer or film scene',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Lo-Fi Study',
+      prompt: 'Lo-fi hip hop beats, rainy day, soft piano, perfect for studying or relaxing',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'EDM Club',
+      prompt: 'EDM dance track with drop, energetic synths, 128 BPM, club-ready anthem',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Acoustic Folk',
+      prompt: 'Acoustic folk song with gentle guitar, warm male vocals, storytelling mood, 2.5 minutes',
+      difficulty: 'advanced' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Is ACE-Step really a free Mureka AI alternative?',
+      answer:
+        'Yes. ACE-Step 1.5 is 100% free and open-source under an Apache 2.0 license. Mureka offers a free tier with limited monthly credits. ACE-Step has no credit system — generate unlimited music with no subscription required.',
+    },
+    {
+      question: 'How does ACE-Step compare to Mureka in music quality?',
+      answer:
+        'In independent benchmarks, ACE-Step 1.5 matches or exceeds Mureka V7 in most music quality metrics, including vocal realism, instrument accuracy, and structural coherence. Both tools produce professional-grade audio.',
+    },
+    {
+      question: 'Can ACE-Step do voice cloning like Mureka?',
+      answer:
+        'Yes. ACE-Step 1.5 supports LoRA fine-tuning, which lets you train the model on your own voice with just a few samples. Mureka offers a similar voice cloning feature but only on paid plans.',
+    },
+    {
+      question: 'What\'s the main reason people switch from Mureka to ACE-Step?',
+      answer:
+        'The top reasons: (1) No subscription cost, (2) Ability to run locally for privacy, (3) Faster generation speed on local hardware, (4) Full open-source control for developers and researchers.',
+    },
+    {
+      question: 'Does ACE-Step support stem separation like Mureka?',
+      answer:
+        'Yes. ACE-Step 1.5 includes stem separation, cover generation, section repainting, and lyrics editing — matching most of Mureka\'s advanced features at zero cost.',
+    },
+  ],
+}
+
+// ─── ACE-Step vs Mureka 对比页配置 ────────────────────────────────────────────
+export const vsAcestepVsMurekaConfig = {
+  hero: {
+    badge: 'Head-to-Head Comparison',
+    title: 'ACE-Step 1.5 vs Mureka AI (2026)',
+    subtitle:
+      'The definitive comparison of two leading AI music generators. See which tool wins on price, speed, quality, and features.',
+    stats: [
+      { value: 'Free', label: 'ACE-Step Cost' },
+      { value: '$10/mo', label: 'Mureka Starting Price' },
+      { value: '2026', label: 'Updated For' },
+    ],
+    ctaText: 'Try ACE-Step Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: DollarSign,
+      title: 'Price Winner: ACE-Step',
+      description:
+        'ACE-Step is 100% free and open-source. Mureka\'s free tier offers limited credits; paid plans start at $10/month.',
+    },
+    {
+      icon: Zap,
+      title: 'Speed Winner: ACE-Step',
+      description:
+        'ACE-Step generates a full song in ~20 seconds locally. Mureka\'s cloud generation takes 1–3 minutes in queue.',
+    },
+    {
+      icon: Music,
+      title: 'Quality: Tie',
+      description:
+        'Both produce professional-grade audio. ACE-Step edges ahead on structural coherence; Mureka excels on vocal realism.',
+    },
+    {
+      icon: GitCompare,
+      title: 'Features Winner: ACE-Step',
+      description:
+        'ACE-Step includes stem separation, cover generation, section repainting, LoRA fine-tuning — all free. Mureka locks these to paid tiers.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Define Your Use Case',
+      description: 'Casual creator? Use ACE-Step free. Need cloud collaboration? Mureka may fit.',
+    },
+    {
+      title: 'Test Both Tools',
+      description: 'Both have free tiers. Generate the same prompt in each to compare quality directly.',
+    },
+    {
+      title: 'Check Licensing Needs',
+      description: 'ACE-Step: Apache 2.0, full commercial use. Mureka: commercial rights tied to paid plan.',
+    },
+    {
+      title: 'Make Your Decision',
+      description: 'For most users, ACE-Step wins on value. For team workflows, Mureka\'s cloud platform adds convenience.',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Pop Song',
+      prompt: 'Catchy pop song, female vocals, verse-chorus structure, summer energy, 3 minutes',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Hip-Hop',
+      prompt: 'Modern hip-hop track, trap beat, 85 BPM, dark melodic hooks, no vocals',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Cinematic',
+      prompt: 'Cinematic orchestral build, emotional piano, strings swelling, epic resolution',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Jazz Lounge',
+      prompt: 'Smooth jazz lounge, upright bass, piano, brushed drums, sophisticated atmosphere',
+      difficulty: 'advanced' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Is ACE-Step 1.5 better than Mureka AI?',
+      answer:
+        'For most users, yes — ACE-Step wins on price (free vs. paid), speed (local generation), and developer flexibility (open-source). Mureka wins on cloud convenience and a more polished web UI for non-technical users.',
+    },
+    {
+      question: 'Can ACE-Step replace Mureka for professional music production?',
+      answer:
+        'Yes. ACE-Step 1.5 supports LoRA fine-tuning, stem separation, cover generation, and 50+ language vocals — covering most professional production workflows that Mureka offers.',
+    },
+    {
+      question: 'Which has better vocal quality — ACE-Step or Mureka?',
+      answer:
+        'Mureka V8 slightly edges out in Chinese vocal realism. ACE-Step 1.5 excels in multi-language vocals (50+ languages vs. Mureka\'s 10) and structural vocal coherence across long songs.',
+    },
+    {
+      question: 'Does Mureka have an open-source version like ACE-Step?',
+      answer:
+        'No. Mureka is a closed, proprietary SaaS platform. ACE-Step is fully open-source (Apache 2.0) — you can download, run locally, modify, and commercially use the model for free.',
+    },
+    {
+      question: 'Which AI music generator is better for YouTube monetization?',
+      answer:
+        'Both produce royalty-free music. However, ACE-Step\'s Apache 2.0 license provides clearer commercial rights with no per-use fees. Mureka\'s commercial rights are tied to your subscription plan tier.',
+    },
+  ],
+}
+
+// ─── ACE-Step vs Suno 对比页配置 ─────────────────────────────────────────────
+export const vsAcestepVsSunoConfig = {
+  hero: {
+    badge: 'ACE-Step vs Suno AI',
+    title: 'ACE-Step 1.5 vs Suno AI: Which Wins in 2026?',
+    subtitle:
+      'Suno AI is the most popular AI music tool. ACE-Step 1.5 is the open-source challenger that\'s faster, free, and more powerful. Here\'s the full comparison.',
+    stats: [
+      { value: 'Free', label: 'ACE-Step Price' },
+      { value: '$8+/mo', label: 'Suno Pro Price' },
+      { value: '10-120×', label: 'Speed Advantage' },
+    ],
+    ctaText: 'Try ACE-Step Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: DollarSign,
+      title: 'Cost: Free vs $8+/mo',
+      description:
+        'ACE-Step 1.5 is 100% free and open-source. Suno Pro costs $8/month; Suno Premier is $24/month. ACE-Step saves you $96–$288/year.',
+    },
+    {
+      icon: Zap,
+      title: '10–120× Faster',
+      description:
+        'ACE-Step generates a full song in 2 seconds on an A100 or ~20 seconds on an RTX 3090. Suno typically takes 30–90 seconds per song on their cloud.',
+    },
+    {
+      icon: Shield,
+      title: 'Privacy: Local vs Cloud',
+      description:
+        'ACE-Step runs 100% on your machine — your lyrics, prompts, and music never leave your computer. Suno processes everything on their servers.',
+    },
+    {
+      icon: Sparkles,
+      title: 'More Editing Features',
+      description:
+        'ACE-Step offers stem separation, cover generation, section repainting, and LoRA voice cloning — features Suno limits to paid tiers or doesn\'t offer at all.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Choose Your Priority',
+      description: 'Need cloud convenience? Suno. Need speed + free + local control? ACE-Step.',
+    },
+    {
+      title: 'Test with the Same Prompt',
+      description: 'Run identical prompts in both tools to compare output quality for your specific style.',
+    },
+    {
+      title: 'Check Commercial Licensing',
+      description: 'ACE-Step: Apache 2.0, full commercial rights always. Suno: commercial use requires $8+/mo paid plan.',
+    },
+    {
+      title: 'Scale Your Production',
+      description: 'ACE-Step has no generation limits. Suno caps free users at 10 songs/day and charges for more.',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Viral Pop',
+      prompt: 'Viral pop song, catchy hook, upbeat energy, female vocals, radio-ready sound',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Dark Hip-Hop',
+      prompt: 'Dark trap beat, 808 bass, atmospheric pads, minor key, suitable for rap over it',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Indie Folk',
+      prompt: 'Indie folk song, fingerpicked acoustic guitar, male vocals, melancholic but hopeful, 3 minutes',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Game Soundtrack',
+      prompt: 'Fantasy RPG game soundtrack, epic orchestral, adventure theme, heroic and sweeping',
+      difficulty: 'advanced' as const,
+    },
+    {
+      keyword: 'R&B Smooth',
+      prompt: 'Smooth R&B track, soulful female vocals, late-night mood, sultry and relaxed',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Country Rock',
+      prompt: 'Country rock anthem, electric guitar, strong male vocals, driving beat, arena-ready',
+      difficulty: 'medium' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Is ACE-Step 1.5 better than Suno AI?',
+      answer:
+        'ACE-Step 1.5 outperforms Suno on speed (10–120× faster), price (free vs. $8+/mo), privacy (local vs. cloud), and developer features. Suno has a more polished web interface and is easier for non-technical users, but ACE-Step matches it on audio quality in most benchmarks.',
+    },
+    {
+      question: 'Can ACE-Step replace Suno for YouTube content creation?',
+      answer:
+        'Yes. ACE-Step generates royalty-free music with full commercial rights (Apache 2.0) at no cost. Suno requires a paid plan for commercial use. For YouTube creators, ACE-Step offers better value with unlimited generations.',
+    },
+    {
+      question: 'Does Suno have better vocal quality than ACE-Step?',
+      answer:
+        'Suno v5 has slightly higher vocal realism scores in some benchmarks. ACE-Step 1.5 produces comparable vocals and supports 50+ languages vs. Suno\'s primarily English-focused generation. For non-English music, ACE-Step often wins.',
+    },
+    {
+      question: 'Can ACE-Step generate full songs with lyrics like Suno?',
+      answer:
+        'Yes. ACE-Step 1.5 generates complete songs with lyrics, vocals, instruments, and structured verse/chorus/bridge arrangements — identical to what Suno offers.',
+    },
+    {
+      question: 'Is Suno safer for copyright than ACE-Step?',
+      answer:
+        'Both generate AI music that is royalty-free. ACE-Step\'s Apache 2.0 open-source license is legally clearer for commercial use. Suno\'s terms restrict commercial use to paid plans.',
+    },
+    {
+      question: 'Why is ACE-Step faster than Suno?',
+      answer:
+        'ACE-Step 1.5 uses optimized local inference — it runs directly on your GPU. Suno uses shared cloud infrastructure, which means queue times and network latency. On an A100, ACE-Step generates a song in under 2 seconds.',
+    },
+  ],
+}
+
+// ─── Podcast Music 页面配置 ───────────────────────────────────────────────────
+export const podcastMusicConfig = {
+  hero: {
+    badge: 'Podcast Creators',
+    title: 'AI Music Generator for Podcasts',
+    subtitle:
+      'Create custom intro music, outro tracks, and background music for your podcast in seconds. Royalty-free, unique to your show, no licensing fees.',
+    stats: [
+      { value: '870+', label: 'Monthly Searches' },
+      { value: '$1.05', label: 'High CPC (Monetizable)' },
+      { value: '100%', label: 'Royalty-Free' },
+    ],
+    ctaText: 'Create Podcast Music Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Radio,
+      title: 'Unique Podcast Identity',
+      description:
+        'Stand out with a custom intro that\'s uniquely yours. Unlike stock music libraries, no two podcasters get the same track.',
+    },
+    {
+      icon: Shield,
+      title: 'No Licensing Nightmares',
+      description:
+        'Stock music libraries charge $20–$200/year. AI-generated music is royalty-free forever with no recurring license fees.',
+    },
+    {
+      icon: Music,
+      title: 'Intro + Outro + Bumpers',
+      description:
+        'Generate your intro theme, episode transition bumpers, and outro music — all matching your show\'s unique tone.',
+    },
+    {
+      icon: Clock,
+      title: 'Perfect Length Every Time',
+      description:
+        'Specify exactly how long you need: 15-second intro, 30-second outro, or 5-minute ambient background. AI nails it.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Describe Your Podcast Tone',
+      description: 'Tell the AI your podcast\'s vibe: "professional and serious", "fun and casual", "mysterious true crime"',
+    },
+    {
+      title: 'Choose Track Purpose',
+      description: 'Specify intro, outro, transition bumper, or episode background music',
+    },
+    {
+      title: 'AI Generates Your Theme',
+      description: 'Get a unique, custom music track in under 20 seconds that perfectly matches your podcast brand',
+    },
+    {
+      title: 'Use Across All Platforms',
+      description: 'Upload to Spotify, Apple Podcasts, YouTube, RSS feeds — royalty-free on every platform',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'True Crime Intro',
+      prompt: 'Dark suspenseful true crime podcast intro, tense strings, dramatic build, 20 seconds',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Business Podcast',
+      prompt: 'Professional corporate podcast intro, confident piano, modern feel, 15 seconds, no vocals',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Comedy Show',
+      prompt: 'Fun upbeat comedy podcast intro, quirky brass, playful energy, 20 seconds',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Wellness Podcast',
+      prompt: 'Calm wellness podcast background music, gentle acoustic guitar, soothing and peaceful, 5 minutes',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Tech Podcast',
+      prompt: 'Tech podcast intro, electronic synths, futuristic feel, modern and sharp, 15 seconds',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Interview Show',
+      prompt: 'Warm conversational podcast background music, soft jazz piano, inviting and relaxed, instrumental',
+      difficulty: 'medium' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Can I use AI music for my podcast intro without copyright issues?',
+      answer:
+        'Yes. AI-generated music from ACE-Step is royalty-free. Unlike using Spotify songs or YouTube music (which would get your podcast removed), AI-generated tracks are original creations with no underlying copyrighted samples.',
+    },
+    {
+      question: 'How do I create a podcast intro with AI?',
+      answer:
+        'Simply describe your podcast\'s tone and genre in a text prompt. For example: "Upbeat news podcast intro, 15 seconds, professional and energetic, no vocals." The AI generates a custom track in seconds.',
+    },
+    {
+      question: 'What\'s the best music for podcast intros?',
+      answer:
+        'The best podcast intro music matches your show\'s tone: true crime shows use dark, tense music; comedy podcasts use bright, quirky tracks; business shows use confident, professional sounds. Keep intros 15–30 seconds and outros 15–45 seconds.',
+    },
+    {
+      question: 'Can I use the same AI-generated music across multiple podcast episodes?',
+      answer:
+        'Absolutely. Most podcasters generate one intro theme and reuse it every episode to build brand recognition. You can also generate variations for different segments or seasons.',
+    },
+    {
+      question: 'Is AI podcast music good enough quality for Spotify and Apple Podcasts?',
+      answer:
+        'Yes. ACE-Step 1.5 generates studio-quality audio at professional bitrates. The music sounds indistinguishable from professionally composed tracks and meets all platform quality standards.',
+    },
+  ],
+}
+
+// ─── CapCut AI Music 页面配置 ─────────────────────────────────────────────────
+export const capcutMusicConfig = {
+  hero: {
+    badge: 'CapCut Video Creators',
+    title: 'AI Music Generator for CapCut Videos',
+    subtitle:
+      'CapCut\'s built-in music library is limited. Generate custom AI music that fits your video\'s exact mood, length, and style — royalty-free, forever.',
+    stats: [
+      { value: '+130%', label: 'CapCut Search Growth' },
+      { value: '0', label: 'Copyright Claims' },
+      { value: '∞', label: 'Unique Tracks' },
+    ],
+    ctaText: 'Create CapCut Music Free →',
+    ctaHref: '/#waitlist',
+  },
+  benefits: [
+    {
+      icon: Video,
+      title: 'Match Any Video Length',
+      description:
+        'Generate music that\'s exactly 15 seconds, 60 seconds, or 3 minutes — no cutting or fading needed. Perfect sync with your CapCut edit.',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Beat CapCut\'s Library',
+      description:
+        'CapCut\'s music library uses the same tracks as millions of other creators. Stand out with unique AI-generated music that nobody else has.',
+    },
+    {
+      icon: Shield,
+      title: 'No Watermarks or Strikes',
+      description:
+        'Songs from CapCut\'s trending library can still trigger copyright claims when posted to YouTube. AI-generated music is 100% claim-free.',
+    },
+    {
+      icon: Zap,
+      title: 'Instant Generation',
+      description:
+        'Don\'t waste time browsing CapCut\'s library. Describe your vibe and get a custom track in 20 seconds — faster than finding the right song.',
+    },
+  ],
+  steps: [
+    {
+      title: 'Identify Your Video Mood',
+      description: 'Is your CapCut edit aesthetic, funny, motivational, or trending? Define the mood first.',
+    },
+    {
+      title: 'Generate Custom Music',
+      description: 'Type your prompt: "Aesthetic lo-fi for CapCut montage, soft beats, 60 seconds" and get instant results.',
+    },
+    {
+      title: 'Download the Track',
+      description: 'Export your AI music as MP3 in high quality — ready to import directly into CapCut\'s audio layer.',
+    },
+    {
+      title: 'Add to CapCut & Publish',
+      description: 'Import the track, sync it to your cuts, and post to TikTok, Instagram, or YouTube with zero copyright fear.',
+    },
+  ],
+  examples: [
+    {
+      keyword: 'Aesthetic Montage',
+      prompt: 'Aesthetic dreamy lo-fi music for CapCut montage, soft piano, 60 seconds, no vocals',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Gym Motivation',
+      prompt: 'High energy gym motivation music, heavy bass, powerful beat drops, 90 seconds, no vocals',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Travel Vlog',
+      prompt: 'Upbeat travel vlog music, acoustic guitar with light percussion, adventurous and happy, 2 minutes',
+      difficulty: 'easy' as const,
+    },
+    {
+      keyword: 'Day in My Life',
+      prompt: 'Chill background music for day-in-my-life vlog, gentle pop feel, relatable and warm, 3 minutes',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Transition Beats',
+      prompt: 'Sharp punchy transition beats for CapCut cuts, rhythmic hits every 2 seconds, 30 seconds',
+      difficulty: 'medium' as const,
+    },
+    {
+      keyword: 'Fashion Reel',
+      prompt: 'Trendy fashion reel music, confident walk energy, modern pop production, 45 seconds',
+      difficulty: 'easy' as const,
+    },
+  ],
+  faq: [
+    {
+      question: 'Why shouldn\'t I just use CapCut\'s built-in music?',
+      answer:
+        'CapCut\'s library music is used by millions of other creators — your video won\'t stand out. Some CapCut trending songs can also trigger copyright claims on YouTube or Instagram. AI-generated music is unique to you and 100% claim-free on every platform.',
+    },
+    {
+      question: 'How do I add AI music to CapCut?',
+      answer:
+        'Generate your track with ACE-Step, download it as MP3, then open CapCut → Add Audio → From Files → select your track. It\'s identical to adding any other audio file to your project.',
+    },
+    {
+      question: 'Will AI music get copyright claims on TikTok or YouTube?',
+      answer:
+        'No. AI-generated music is original content with no underlying copyrighted samples. Unlike songs from music libraries or CapCut\'s trending tracks, AI music has never been flagged by Content ID or TikTok\'s music detection systems.',
+    },
+    {
+      question: 'Can I use AI music for CapCut videos I\'ll monetize?',
+      answer:
+        'Yes. ACE-Step generates music under Apache 2.0 license, which allows full commercial use. You can monetize your CapCut videos on YouTube, TikTok, and Instagram without paying any licensing fees.',
+    },
+    {
+      question: 'How do I make music that fits my CapCut video perfectly?',
+      answer:
+        'Specify the exact length in your prompt: "60-second upbeat track for CapCut, no vocals." Then use CapCut\'s beat sync feature to align your cuts to the music\'s rhythm automatically.',
+    },
+    {
+      question: 'Is AI-generated music better than using no-copyright music from YouTube?',
+      answer:
+        'Yes, for several reasons: (1) AI music is unique — competitors can\'t use the same track; (2) YouTube no-copyright libraries often still require attribution; (3) AI music can be generated to exactly match your video\'s length and energy curve.',
     },
   ],
 }
