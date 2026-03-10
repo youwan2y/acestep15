@@ -175,15 +175,15 @@ export default function BubbleGame({ isActive = true }: BubbleGameProps) {
     const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 1000
     
     // 随机大小：大气泡上升慢，小气泡上升快
-    // 自然界中气泡大小范围大约 5mm - 30mm，对应屏幕约 20px - 80px
-    const size = 25 + Math.random() * 55
+    // 气泡大小范围 60px - 150px，更明显可见
+    const size = 60 + Math.random() * 90
     
     // 起始位置：底部随机位置
     const x = Math.random() * (screenWidth - size)
     
-    // 上升速度：大气泡慢，小气泡快（符合物理规律）
-    // 速度范围：8-20秒到达顶部
-    const speed = 10 + (80 - size) / 55 * 10
+    // 上升速度：大气泡慢，小气泡快
+    // 大气泡 15-25秒到达顶部，小气泡 8-15秒
+    const speed = 12 + (150 - size) / 90 * 12
     
     // 摆动参数：模拟水的阻力导致的气泡摆动
     const wobble = Math.random() * Math.PI * 2
@@ -219,17 +219,17 @@ export default function BubbleGame({ isActive = true }: BubbleGameProps) {
   useEffect(() => {
     if (!isActive) return
 
-    // 初始生成几个气泡
-    for (let i = 0; i < 5; i++) {
-      setTimeout(() => createBubble(), i * 300)
+    // 初始生成几个大气泡
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => createBubble(), i * 200)
     }
 
     // 定期生成新气泡
     const interval = setInterval(() => {
-      if (bubblesRef.current.length < 15) {
+      if (bubblesRef.current.length < 8) {
         createBubble()
       }
-    }, 600)
+    }, 800)
 
     return () => clearInterval(interval)
   }, [createBubble, isActive])
@@ -266,7 +266,7 @@ export default function BubbleGame({ isActive = true }: BubbleGameProps) {
     // 播放音效
     const iconIndex = bubbles.find(b => b.id === id)
     if (iconIndex) {
-      const idx = musicIcons.indexOf(iconIndex.icon)
+      const idx = musicIcons.findIndex(icon => icon === iconIndex.icon)
       playNoteSound(idx >= 0 ? idx : 0)
     }
 
