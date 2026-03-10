@@ -7,7 +7,13 @@ import KeywordExamples from '@/components/seo-pages/KeywordExamples'
 import FAQAccordion from '@/components/seo-pages/FAQAccordion'
 import CTASection from '@/components/seo-pages/CTASection'
 import StructuredDataArticle from '@/components/seo-pages/StructuredDataArticle'
+import AudioExamples from '@/components/seo-pages/AudioExamples'
+import CaseStudies from '@/components/seo-pages/CaseStudies'
+import DataVisualization from '@/components/seo-pages/DataVisualization'
+import ImageGallery from '@/components/seo-pages/ImageGallery'
 import { youTubeBackgroundMusicConfig } from '@/lib/seo-data'
+import { audioExamplesData, caseStudiesData, dataVisualizationData } from '@/lib/seo-enhanced-data'
+import { seoImages } from '@/lib/seo-images'
 
 export default function BackgroundMusicContent() {
   return (
@@ -35,10 +41,36 @@ export default function BackgroundMusicContent() {
           {/* Benefits Grid */}
           <BenefitsGrid benefits={youTubeBackgroundMusicConfig.benefits} />
 
+          {/* Visual Examples - NEW! */}
+          <ImageGallery
+            images={seoImages.youtube.gallery}
+            title="YouTube Creator Visual Examples"
+            columns={3}
+          />
+
+          {/* Audio Examples - NEW! */}
+          <AudioExamples
+            examples={audioExamplesData.youtube}
+            title="Listen to Real AI-Generated YouTube Music"
+          />
+
+          {/* Data Visualization - NEW! */}
+          <DataVisualization
+            stats={dataVisualizationData.youtube.stats}
+            trends={dataVisualizationData.youtube.trends}
+            title="YouTube AI Music Market Insights"
+          />
+
           {/* How It Works */}
           <StepByStepGuide
             title="How to Generate Background Music"
             steps={youTubeBackgroundMusicConfig.steps}
+          />
+
+          {/* Case Studies - NEW! */}
+          <CaseStudies
+            studies={caseStudiesData.youtube}
+            title="YouTube Creator Success Stories"
           />
 
           {/* Prompt Examples */}

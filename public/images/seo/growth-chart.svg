@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="768" viewBox="0 0 1024 768" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#009b63;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ed79f;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0a0a1a"/>
+
+  <!-- Gradient overlay -->
+  <rect width="100%" height="100%" fill="url(#gradient)" opacity="0.3"/>
+
+  <!-- Decorative circles -->
+  <circle cx="204.8" cy="230.39999999999998" r="153.6" fill="#10B981" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="819.2" cy="537.5999999999999" r="204.8" fill="#2ed79f" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="0" x2="0" y2="768" stroke="white" stroke-width="0.5"/><line x1="50" y1="0" x2="50" y2="768" stroke="white" stroke-width="0.5"/><line x1="100" y1="0" x2="100" y2="768" stroke="white" stroke-width="0.5"/><line x1="150" y1="0" x2="150" y2="768" stroke="white" stroke-width="0.5"/><line x1="200" y1="0" x2="200" y2="768" stroke="white" stroke-width="0.5"/><line x1="250" y1="0" x2="250" y2="768" stroke="white" stroke-width="0.5"/><line x1="300" y1="0" x2="300" y2="768" stroke="white" stroke-width="0.5"/><line x1="350" y1="0" x2="350" y2="768" stroke="white" stroke-width="0.5"/><line x1="400" y1="0" x2="400" y2="768" stroke="white" stroke-width="0.5"/><line x1="450" y1="0" x2="450" y2="768" stroke="white" stroke-width="0.5"/><line x1="500" y1="0" x2="500" y2="768" stroke="white" stroke-width="0.5"/><line x1="550" y1="0" x2="550" y2="768" stroke="white" stroke-width="0.5"/><line x1="600" y1="0" x2="600" y2="768" stroke="white" stroke-width="0.5"/><line x1="650" y1="0" x2="650" y2="768" stroke="white" stroke-width="0.5"/><line x1="700" y1="0" x2="700" y2="768" stroke="white" stroke-width="0.5"/><line x1="750" y1="0" x2="750" y2="768" stroke="white" stroke-width="0.5"/><line x1="800" y1="0" x2="800" y2="768" stroke="white" stroke-width="0.5"/><line x1="850" y1="0" x2="850" y2="768" stroke="white" stroke-width="0.5"/><line x1="900" y1="0" x2="900" y2="768" stroke="white" stroke-width="0.5"/><line x1="950" y1="0" x2="950" y2="768" stroke="white" stroke-width="0.5"/><line x1="1000" y1="0" x2="1000" y2="768" stroke="white" stroke-width="0.5"/><line x1="0" y1="0" x2="1024" y2="0" stroke="white" stroke-width="0.5"/><line x1="0" y1="50" x2="1024" y2="50" stroke="white" stroke-width="0.5"/><line x1="0" y1="100" x2="1024" y2="100" stroke="white" stroke-width="0.5"/><line x1="0" y1="150" x2="1024" y2="150" stroke="white" stroke-width="0.5"/><line x1="0" y1="200" x2="1024" y2="200" stroke="white" stroke-width="0.5"/><line x1="0" y1="250" x2="1024" y2="250" stroke="white" stroke-width="0.5"/><line x1="0" y1="300" x2="1024" y2="300" stroke="white" stroke-width="0.5"/><line x1="0" y1="350" x2="1024" y2="350" stroke="white" stroke-width="0.5"/><line x1="0" y1="400" x2="1024" y2="400" stroke="white" stroke-width="0.5"/><line x1="0" y1="450" x2="1024" y2="450" stroke="white" stroke-width="0.5"/><line x1="0" y1="500" x2="1024" y2="500" stroke="white" stroke-width="0.5"/><line x1="0" y1="550" x2="1024" y2="550" stroke="white" stroke-width="0.5"/><line x1="0" y1="600" x2="1024" y2="600" stroke="white" stroke-width="0.5"/><line x1="0" y1="650" x2="1024" y2="650" stroke="white" stroke-width="0.5"/><line x1="0" y1="700" x2="1024" y2="700" stroke="white" stroke-width="0.5"/><line x1="0" y1="750" x2="1024" y2="750" stroke="white" stroke-width="0.5"/>
+  </g>
+
+  <!-- Icon placeholder -->
+  <g transform="translate(452, 284)">
+    <rect x="20" y="20" width="80" height="60" rx="8" fill="none" stroke="#10B981" stroke-width="2" opacity="0.3"/>
+    <circle cx="60" cy="50" r="15" fill="none" stroke="#10B981" stroke-width="2" opacity="0.3"/>
+    <path d="M 55 45 L 65 50 L 55 55 Z" fill="#10B981" opacity="0.5"/>
+  </g>
+
+  <!-- Text -->
+  <text x="50%" y="424" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle" filter="url(#glow)">
+    Growth Chart
+  </text>
+
+  <!-- Subtitle -->
+  <text x="50%" y="464" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">
+    AI-Generated Placeholder Image
+  </text>
+
+  <!-- Size badge -->
+  <rect x="874" y="20" width="130" height="30" rx="15" fill="#10B981" opacity="0.2"/>
+  <text x="939" y="35" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" dominant-baseline="middle">
+    1024 × 768
+  </text>
+</svg>
